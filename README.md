@@ -21,3 +21,8 @@ This repository has directories for each of the videos in the course.
 [lil-course-url]: https://www.linkedin.com/learning/
 [lil-thumbnail-url]: http://
 
+
+<!-- FooterStart -->
+---
+[00_01 Introduction →](ch0_intro/00_01_introduction/README.md)
+<!-- FooterEnd -->
