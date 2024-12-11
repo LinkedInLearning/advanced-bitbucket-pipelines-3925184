@@ -52,6 +52,13 @@ wordcount:
 chapterlist:
 	@find . -type f -name README.md | sed 's/\/README.md//' | sed 's/\.\///' | sed '/\./d' | sort
 
+chapterlist-touch:
+	@cat ./CHAPTER_LIST.txt | while read line; do \
+		echo "$$line"; \
+		mkdir -p $$line; \
+		touch $$line/README.md; \
+	done
+
 overlay:
 	@find . -type f -name README.md | sort | sed 's/^\.\///' | sed 's/\// > /g' | sed 's/ > README.md//'
 
