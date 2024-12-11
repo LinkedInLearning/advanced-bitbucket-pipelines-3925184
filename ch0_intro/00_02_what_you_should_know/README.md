@@ -5,6 +5,7 @@ To get the most out of this course, there are a few things you should be familia
 ## Git and Bitbucket
 
 You should already be familiar with using the following tools:
+
 - **Git**, a free, open-source version control system that allows users to store code, track changes, and collaborate on projects
 - **Bitbucket**, a cloud-based service for hosting git repositories.
 

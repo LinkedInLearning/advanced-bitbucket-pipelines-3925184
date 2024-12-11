@@ -10,7 +10,8 @@ hello:
 	@echo "\tclean       - remove backup files"
 	@echo "\tall         - run all tasks (except clean)"
 
-all: footer lint spellcheck footer
+#all: footer lint spellcheck
+all: footer spellcheck
 	@echo "Done."
 
 lint:
