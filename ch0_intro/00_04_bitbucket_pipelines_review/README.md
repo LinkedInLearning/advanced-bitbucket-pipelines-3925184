@@ -11,6 +11,9 @@ You should be familiar with these essential elements of the Bitbucket Pipelines 
 | Stages | Group steps into logical units to organize and parallelize pipeline execution. | [Stage Options](https://support.atlassian.com/bitbucket-cloud/docs/stage-options/) |
 | YAML Anchors | Reusable YAML syntax, useful for defining shared steps or configurations that help avoid duplication. | [YAML Anchors](https://support.atlassian.com/bitbucket-cloud/docs/yaml-anchors/) |
 
+## Resources
+
+- **[Validator for bitbucket-pipelines.yml](https://bitbucket.org/product/pipelines/validator)**: Use this tool to validate your `bitbucket-pipelines.yml` file.
 
 <!-- FooterStart -->
 ---
