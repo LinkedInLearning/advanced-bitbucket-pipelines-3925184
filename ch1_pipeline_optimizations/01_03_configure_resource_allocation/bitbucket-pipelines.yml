@@ -8,7 +8,7 @@ pipelines:
       script:
         - echo "Running default size for 5 seconds"
         - echo "CPUs = $(nproc)"
-        - echo "RAM  = $(grep MemTotal /proc/meminfo | awk '{print $2 / 1024 /1024 }') GB"
+        - echo "RAM  = $(grep MemTotal /proc/meminfo | awk '{print $2 / 1024 / 1024 }') GB"
         - df --block-size=1G / | awk 'NR==2 {print "Disk = " $2 " GB"}'
         - sleep 5
         -
@@ -18,6 +18,6 @@ pipelines:
       script:
         - echo "Running double size for 5 seconds"
         - echo "CPUs = $(nproc)"
-        - echo "RAM = $(grep MemTotal /proc/meminfo | awk '{print $2 / 1024 /1024 }') GB"
+        - echo "RAM = $(grep MemTotal /proc/meminfo | awk '{print $2 / 1024 / 1024 }') GB"
         - df --block-size=1G / | awk 'NR==2 {print "Disk = " $2 " GB"}'
         - sleep 5
