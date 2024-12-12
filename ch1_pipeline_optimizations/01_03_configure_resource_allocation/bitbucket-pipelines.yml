@@ -1,23 +1,21 @@
 image: atlassian/default-image:4
 
+definitions:
+  steps:
+    - step: &resource_allocation_report
+        name: Resource Allocation Report
+        script:
+          - echo "CPUs = $(nproc)"
+          - echo "RAM  = $(grep MemTotal /proc/meminfo | awk '{print $2 / 1024 / 1024 }') GB"
+          - echo "Disk = $(df --block-size=1G / | awk 'NR==2 {print $2}') GB"
+
 pipelines:
   default:
-  - step:
-      name: Default Size
-      size: 1x
-      script:
-        - echo "Running default size for 5 seconds"
-        - echo "CPUs = $(nproc)"
-        - echo "RAM  = $(grep MemTotal /proc/meminfo | awk '{print $2 / 1024 / 1024 }') GB"
-        - df --block-size=1G / | awk 'NR==2 {print "Disk = " $2 " GB"}'
-        - sleep 5
-        -
-  - step:
-      name: Double Size
-      size: 2x
-      script:
-        - echo "Running double size for 5 seconds"
-        - echo "CPUs = $(nproc)"
-        - echo "RAM = $(grep MemTotal /proc/meminfo | awk '{print $2 / 1024 / 1024 }') GB"
-        - df --block-size=1G / | awk 'NR==2 {print "Disk = " $2 " GB"}'
-        - sleep 5
+    - step:
+        name: Default Size
+        size: 1x
+        <<: *resource_allocation_report
+    - step: 
+        name: Double Size
+        size: 2x
+        <<: *resource_allocation_report
