@@ -1,15 +1,18 @@
 # 01_04 Use Conditional Steps
 
 ```text
-├── ./README.md
-├── ./.gitignore
-├── ./bitbucket-pipelines.yml
-├── ./python-backend
-│   ├── ./python-backend/app.py
-│   ├── ./python-backend/app_test.py
-│   └── ./python-backend/requirements.txt
-└── ./ruby-backend
-    ├── ./ruby-backend/app.rb
-    └── ./ruby-backend/app_test.rb
-    ├── ./ruby-backend/Gemfile
+├── README.md
+├── bitbucket-pipelines.yml
+├── bitbucket-pipelines-no-conditional-steps.yml
+├── bitbucket-pipelines-with-conditional-steps.yml
+├── python-backend
+│   ├── app.py
+│   ├── app_test.py
+│   └── requirements.txt
+├── ruby-backend
+│   ├── app.rb
+│   ├── app_test.rb
+│   └── Gemfile
+└── shared
+    └── database-schema.json
 ```
