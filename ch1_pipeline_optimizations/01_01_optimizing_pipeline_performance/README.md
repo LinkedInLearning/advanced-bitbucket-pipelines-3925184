@@ -12,5 +12,5 @@ Each of these strategies can significantly improve your pipeline performance and
 
 <!-- FooterStart -->
 ---
-[← 00_04 Bitbucket Pipelines Review](../../ch0_intro/00_04_bitbucket_pipelines_review/README.md) | [Advanced Bitbucket Pipelines: Automating Deployments & Managing Third Party Integrations →](../../README.md)
+[← 00_04 Bitbucket Pipelines Review](../../ch0_intro/00_04_bitbucket_pipelines_review/README.md) | [01_02 Configure Maximum Runtime →](../01_02_configure_maximum_runtime/README.md)
 <!-- FooterEnd -->

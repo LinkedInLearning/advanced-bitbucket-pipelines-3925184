@@ -1,0 +1,13 @@
+options:
+  max-time: 2 # Pipeline will timeout after 2 minutes
+
+image: atlassian/default-image:4
+
+pipelines:
+  default:
+    - step:
+        name: Long Running Step
+        script:
+          - echo "Simulate a network timeout"
+          - sleep 240 # Sleep for 4 minutes
+
