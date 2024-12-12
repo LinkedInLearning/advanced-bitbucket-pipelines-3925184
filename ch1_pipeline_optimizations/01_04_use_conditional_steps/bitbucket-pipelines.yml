@@ -1,0 +1,34 @@
+image: atlassian/default-image:4
+
+definitions:
+  services:
+    database:
+      image: postgres:14.3
+      environment:
+        POSTGRES_DB: 'testing'
+        POSTGRES_USER: 'testing'
+        POSTGRES_PASSWORD: 'testing'
+
+pipelines:
+  default:
+    - step:
+        name: Test Python
+        services:
+          - database
+        image: python:3
+        script:
+          - echo "# RUNNING PYTHON TESTS"
+          - cd ./python-backend
+          - pip install --requirement requirements.txt
+          - python3 -m unittest --verbose app_test.py
+    - step:
+        name: Test Ruby
+        services:
+          - database
+        image: ruby:3
+        script:
+          - echo "# RUNNING RUBY TESTS"
+          - cd ./ruby-backend
+          - bundle install
+          - bundle exec ruby app_test.rb
+
