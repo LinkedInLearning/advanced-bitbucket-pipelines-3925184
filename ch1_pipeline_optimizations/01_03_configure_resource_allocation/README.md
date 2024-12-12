@@ -10,7 +10,7 @@ options:
 
 pipelines:
   default:
-	- step:
+    - step:
 ```
 
 ## Step Resource Allocation
