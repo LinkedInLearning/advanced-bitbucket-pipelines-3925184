@@ -43,5 +43,5 @@ The `size` option can be set to one of the following values:
 
 <!-- FooterStart -->
 ---
-[← 01_02 Configure Maximum Runtime](../01_02_configure_maximum_runtime/README.md) | [Advanced Bitbucket Pipelines: Automating Deployments & Managing Third Party Integrations →](../../README.md)
+[← 01_02 Configure Maximum Runtime](../01_02_configure_maximum_runtime/README.md) | [01_04 Use Conditional Steps →](../01_04_use_conditional_steps/README.md)
 <!-- FooterEnd -->
