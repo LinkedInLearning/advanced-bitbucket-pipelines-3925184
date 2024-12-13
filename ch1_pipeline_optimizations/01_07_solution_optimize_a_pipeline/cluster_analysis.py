@@ -8,7 +8,7 @@ import json
 import pandas as pd
 import numpy as np
 
-# These imports need to be added when the analysis code is ready
+# TODO: These imports need to be added when the analysis code is ready
 # import tensorflow as tf
 # from sklearn.cluster import KMeans
 # from sklearn.metrics import silhouette_score
@@ -21,7 +21,8 @@ def load_dataset(file_path):
     """
     print("Creating or loading dataset...")
 
-    # Until the real dataset is ready, generate a random dataset
+    # TODO: Add code to download the dataset from Amazing Mobile App HQ
+    # If not data is in place, generate a random dataset
     if not os.path.exists(file_path):
         os.makedirs(os.path.dirname(file_path), exist_ok=True)
 
