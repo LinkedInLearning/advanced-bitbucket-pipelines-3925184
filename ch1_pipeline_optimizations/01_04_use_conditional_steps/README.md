@@ -52,6 +52,7 @@ Bitbucket allows us to use a `condition` directive to run portions of a pipeline
 │   ├── app.rb
 │   ├── app_test.rb
 │   └── Gemfile
+│   └── Gemfile.lock
 └── shared
     └── database-schema.json
 ```
