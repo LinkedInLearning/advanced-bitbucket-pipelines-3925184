@@ -1,0 +1,52 @@
+definitions:
+  caches:
+    custom-ruby:
+      path: ruby-backend/vendor/bundle
+      key:
+        files:
+          - ruby-backend/Gemfile.lock
+  services:
+    database:
+      image: postgres:14.3
+      environment:
+        POSTGRES_DB: 'testing'
+        POSTGRES_USER: 'testing'
+        POSTGRES_PASSWORD: 'testing'
+
+pipelines:
+  default:
+    - step:
+        name: Test Python
+        caches:
+          - pip
+        services:
+          - database
+        image: python:3
+        condition:
+          changesets:
+            includePaths:
+              - "shared/**"
+              - "python-backend/**"
+        script:
+          - echo "# RUNNING PYTHON TESTS"
+          - cd ./python-backend
+          - pip install --requirement requirements.txt
+          - python3 -m unittest --verbose app_test.py
+    - step:
+        name: Test Ruby
+        caches:
+          - custom-ruby
+        services:
+          - database
+        image: ruby:3
+        condition:
+          changesets:
+            includePaths:
+              - "shared/**"
+              - "ruby-backend/**"
+        script:
+          - echo "# RUNNING RUBY TESTS"
+          - cd ./ruby-backend
+          - bundle install --path vendor/bundle
+          - bundle exec ruby app_test.rb
+

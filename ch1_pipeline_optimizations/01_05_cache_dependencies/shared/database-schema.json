@@ -1,0 +1,74 @@
+{
+  "database": {
+    "name": "my_database",
+    "host": "remote-postgres-service.com",
+    "port": 5432,
+    "username": "my_remote_user",
+    "password": "my_secure_password"
+  },
+  "connections": [
+    {
+      "name": "default_connection",
+      "database": "my_database",
+      "driver": "postgresql",
+      "host": "remote-postgres-service.com",
+      "port": 5432,
+      "username": "my_remote_user",
+      "password": "my_secure_password"
+    },
+    {
+      "name": "readonly_connection",
+      "database": "my_database_ro",
+      "driver": "postgresql",
+      "host": "remote-postgres-service.com",
+      "port": 5432,
+      "username": "my_remote_user_ro",
+      "password": "my_secure_password_ro"
+    }
+  ],
+  "tables": [
+    {
+      "name": "users",
+      "fields": [
+        {"name": "id", "type": "integer"},
+        {"name": "email", "type": "string"}
+      ]
+    },
+    {
+      "name": "orders",
+      "fields": [
+        {"name": "id", "type": "integer"},
+        {"name": "user_id", "type": "integer"},
+        {"name": "order_date", "type": "date"}
+      ]
+    }
+  ],
+  "indexes": [
+    {
+      "table_name": "users",
+      "index_name": "email_idx",
+      "fields": ["email"]
+    },
+    {
+      "table_name": "orders",
+      "index_name": "user_id_idx",
+      "fields": ["user_id"]
+    }
+  ],
+  "relationships": [
+    {
+      "name": "one_to_many",
+      "table1": "users",
+      "table2": "orders"
+    },
+    {
+      "name": "many_to_one",
+      "table1": "orders",
+      "table2": "users"
+    }
+  ],
+  "schema_version": 3,
+  "created_at": "2022-01-01T12:00:00.000Z",
+  "updated_at": "2022-01-02T14:30:00.000Z"
+}
+

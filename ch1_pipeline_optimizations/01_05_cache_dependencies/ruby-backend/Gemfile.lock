@@ -1,0 +1,16 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    minitest (5.25.4)
+    pg (1.5.9)
+
+PLATFORMS
+  aarch64-linux
+  ruby
+
+DEPENDENCIES
+  minitest
+  pg
+
+BUNDLED WITH
+   2.5.22
