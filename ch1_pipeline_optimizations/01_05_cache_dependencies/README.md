@@ -54,7 +54,10 @@ Then use the cache by name in a `step`:
         - custom-ruby
 ```
 
+
 ## References
+
+- Compressed cache size limit is 1 GB; Any larger and the cache will not be uploaded.
 
 - [Caches - Step Options](https://support.atlassian.com/bitbucket-cloud/docs/step-options/#Caches)
 - [Caches - Documentation](https://support.atlassian.com/bitbucket-cloud/docs/cache-dependencies/)

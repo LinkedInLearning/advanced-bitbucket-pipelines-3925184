@@ -1,11 +1,4 @@
 pandas
 scikit-learn
 numpy
-matplotlib
-seaborn
-scipy
 tensorflow
-keras
-torch
-fastai
-xgboost
