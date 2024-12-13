@@ -1,29 +1,13 @@
 image: python:3.9
 
-options:
-  max-time: 10
-
-definitions:
-  caches:
-    data: ./data
-
 pipelines:
   default:
     - step:
         name: Run Data Analysis
 
-        caches:
-          - pip
-          - data
-
         script:
           - pip install -r requirements.txt
           - python cluster_analysis.py
-
-        condition:
-          changesets:
-            includePaths:
-              - cluster_analysis.py
 
         artifacts:
           - analysis_report.md

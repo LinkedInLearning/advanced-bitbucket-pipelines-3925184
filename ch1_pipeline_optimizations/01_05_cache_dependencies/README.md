@@ -62,8 +62,7 @@ Then use the cache by name in a `step`:
 - [Caches - Step Options](https://support.atlassian.com/bitbucket-cloud/docs/step-options/#Caches)
 - [Caches - Documentation](https://support.atlassian.com/bitbucket-cloud/docs/cache-dependencies/)
 
-
 <!-- FooterStart -->
 ---
-[← 01_04 Use Conditional Steps](../01_04_use_conditional_steps/README.md) | [Advanced Bitbucket Pipelines: Automating Deployments & Managing Third Party Integrations →](../../README.md)
+[← 01_04 Use Conditional Steps](../01_04_use_conditional_steps/README.md) | [01_06 Challenge: Optimize a Workflow in Bitbucket Pipelines →](../01_06_challenge_optimize_a_pipeline/README.md)
 <!-- FooterEnd -->

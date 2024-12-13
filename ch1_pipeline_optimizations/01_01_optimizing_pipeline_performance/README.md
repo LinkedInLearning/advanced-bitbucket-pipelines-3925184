@@ -9,7 +9,6 @@ In this chapter, we’ll cover four strategies for optimizing pipelines:
 
 Each of these strategies can significantly improve your pipeline performance and contribute to faster, more efficient development cycles. Let’s get started and dive into the first topic: **Configuring Maximum Runtime**.
 
-
 <!-- FooterStart -->
 ---
 [← 00_04 Bitbucket Pipelines Review](../../ch0_intro/00_04_bitbucket_pipelines_review/README.md) | [01_02 Configure Maximum Runtime →](../01_02_configure_maximum_runtime/README.md)

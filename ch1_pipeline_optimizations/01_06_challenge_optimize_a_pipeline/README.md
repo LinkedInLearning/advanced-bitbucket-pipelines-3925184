@@ -22,9 +22,14 @@ Review the current pipeline configuration and make changes to optimize the pipel
 1. Log into Bitbucket and create a new repository.
 1. Add the exercise files.
 1. Run the pipeline to get an idea of the pipeline performance before making any changes.
-1. Update the pipeline configuration meet the specifications provided by the Data Analysis team.
+1. Update the [pipeline configuration](./bitbucket-pipelines.yml) to meet the specifications provided by the Data Analysis team.
 
 > [!NOTE]
 > Use the topics from this chapter to solve the challenge, specifically: `max-time`, `caches`, and `conditions`.
 
 This challenge should take 10-15 minutes to complete.
+
+<!-- FooterStart -->
+---
+[← 01_05 Cache Dependencies](../01_05_cache_dependencies/README.md) | [01_07 Solution: Optimize a Workflow in Bitbucket Pipelines →](../01_07_solution_optimize_a_pipeline/README.md)
+<!-- FooterEnd -->

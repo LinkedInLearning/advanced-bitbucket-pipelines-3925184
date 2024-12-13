@@ -1,4 +1,4 @@
-TARGETS := hello dev-requirements requirements lint black lab process view clean all
+TARGETS := hello dev-requirements requirements lint black analysis clean all
 TAG := $(shell git rev-parse --short HEAD)
 
 hello:
@@ -17,7 +17,6 @@ lint:
 
 black:
 	black *.py
-	black --ipynb *.ipynb
 
 analysis:
 	python3 ./cluster_analysis.py

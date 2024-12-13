@@ -23,7 +23,6 @@ The best way to use the exercise files is to download the repo as a zip file and
 1. Locate the chapter and video that correspond to the course content.
 1. Use the files as needed, uploading them to a Bitbucket, applying them in the AWS web interface, or modifying them in your local editor.
 
-
 <!-- FooterStart -->
 ---
 [← 00_02 What You Should Know](../00_02_what_you_should_know/README.md) | [00_04 Bitbucket Pipelines Review →](../00_04_bitbucket_pipelines_review/README.md)

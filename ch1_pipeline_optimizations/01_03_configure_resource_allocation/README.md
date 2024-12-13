@@ -40,7 +40,6 @@ The `size` option can be set to one of the following values:
 > Increasing size uses additional build minutes.
 > 2x, 4x, and 8x will use the same multiplier on build minutes per minute of execution
 
-
 <!-- FooterStart -->
 ---
 [← 01_02 Configure Maximum Runtime](../01_02_configure_maximum_runtime/README.md) | [01_04 Use Conditional Steps →](../01_04_use_conditional_steps/README.md)

@@ -50,7 +50,6 @@ Ask your question there and I’ll do my best to help you out.  If other folks h
 
 Also, please check out the Q&A section to provide answers! As a community, we’ll use the Q&A to collaborate on a positive learning experience for everyone.
 
-
 <!-- FooterStart -->
 ---
 [← 00_01 Introduction](../00_01_introduction/README.md) | [00_03 Using the Exercise Files →](../00_03_using_the_exercise_files/README.md)

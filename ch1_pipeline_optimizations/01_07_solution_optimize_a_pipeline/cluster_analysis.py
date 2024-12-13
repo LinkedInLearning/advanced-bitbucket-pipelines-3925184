@@ -1,12 +1,15 @@
 """
 This script performs clustering analysis on a dataset and generates a report.
+
 """
+
 import os
 import json
 import pandas as pd
 import numpy as np
 
 # These imports need to be added when the analysis code is ready
+# import tensorflow as tf
 # from sklearn.cluster import KMeans
 # from sklearn.metrics import silhouette_score
 
@@ -26,17 +29,17 @@ def load_dataset(file_path):
             "feature1": np.random.uniform(0, 100, 1000).tolist(),
             "feature2": np.random.uniform(0, 100, 1000).tolist(),
             "feature3": np.random.randint(0, 50, 1000).tolist(),
-            "category": np.random.choice(["A", "B", "C"], 1000).tolist()
+            "category": np.random.choice(["A", "B", "C"], 1000).tolist(),
         }
 
-        with open(file_path, 'w') as f:
+        with open(file_path, "w") as f:
             json.dump(data, f)
         print("Dataset created at", file_path)
 
     else:
         print("Dataset exists, loading from", file_path)
 
-    with open(file_path, 'r') as f:
+    with open(file_path, "r") as f:
         data = json.load(f)
 
     return pd.DataFrame(data)
@@ -47,8 +50,8 @@ def perform_analysis(df):
     """
     Perform clustering analysis on the dataset.
     """
-
     print("Performing clustering analysis...")
+    print("Dataset shape:", df.shape)
 
     return None, None
 
@@ -67,7 +70,7 @@ def generate_report(summary, silhouette_score, output_file):
 
 ## Silhouette Score
 
-- TODO: Add silhouette score here
+Based on the analysis, the silhouette score is: {silhouette_score}
 
 ## Cluster Summary Statistics
 
@@ -92,4 +95,3 @@ if __name__ == "__main__":
 
     # Generate report
     generate_report(cluster_summary, silhouette_avg, report_path)
-
