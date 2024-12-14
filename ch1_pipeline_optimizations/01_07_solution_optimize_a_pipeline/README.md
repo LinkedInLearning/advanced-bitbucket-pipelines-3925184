@@ -31,6 +31,51 @@ This challenge should take 10-15 minutes to complete.
 
 ## Challenge Solution
 
+1. Create a new repo and add the exercise files
+1. Adding the files may not trigger the pipeline right away.  Go to the **Pipelines** menu and select **Run initial pipeline**.
+1. When the pipeline completes, observe the **Step time duration**.
+1. View and edit the pipeline configuration. Make the following changes:
+
+  1. Add a `max-time` option:
+
+          options:
+            max-time: 10
+
+  1. Add a custom cache definition for the `./data` directory:
+
+          definitions:
+            caches:
+              data: ./data
+
+  1. Update the step to use the custom cache and the pre-defined cache for `pip`.
+
+          caches:
+            - pip
+            - data
+
+1. Commit the changes and allow the pipeline to run.  This run should create the caches.
+1. Observe the step time duration and confirm that the caches were created.
+1. Select **Rerun** to run the pipeline again.
+1. Observe the step time duration and confirm that the caches were downloaded.
+1. Confirm that the installation used the cached content instead of downloading.
+1. Confirm that the script used the local data instead of generating it.
+1. View and edit the pipeline configuration. Make the following changes:
+
+        condition:
+          changesets:
+            includePaths:
+              - cluster_analysis.py
+
+1. Commit the changes and allow the pipeline to run.
+1. Observe the step time duration and confirm that the value is `0s`.
+
+## Bonus steps
+
+1. Make a small change to `cluster_analysis.py` and commit it to the repo.
+1. Confirm that the script will run as expected when the code is updated.
+1. Change the `max-time` value to 1.  Update the `cluster_analysis.py` script and commit the changes.
+1. Confirm the pipeline terminates if the `max-time` value is exceeded.
+
 The final pipeline configuration should be similar to the following [bitbucket-pipelines.yml](./bitbucket-pipelines.yml) file:
 
 ```yaml
