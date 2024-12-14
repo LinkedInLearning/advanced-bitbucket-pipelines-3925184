@@ -1,0 +1,13 @@
+image: atlassian/default-image:4
+
+pipelines:
+  default:
+    - step:
+        name: Use an official Bitbucket pipe
+        script:
+          - pipe: atlassian/bitbucket-iac-scan:0.5.2
+            variables:
+              FILES_TO_SCAN_PATH: .
+              SCAN_EXTRA_ARGS:
+               - "--type=CloudFormation"
+
