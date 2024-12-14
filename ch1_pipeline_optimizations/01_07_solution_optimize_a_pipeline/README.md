@@ -2,7 +2,7 @@
 
 ## Challenge Scenario
 
-In this challenge you’re continuing your role as the Bitbucket Pipelines expert supporting the Amazing Mobile App.
+In this challenge you’re the Bitbucket Pipelines expert supporting development on the Amazing Mobile App.
 
 The Data Analysis team has developed a Python script to run a cluster analysis. This script processes a large dataset stored in a JSON file and generates an analysis report.
 
