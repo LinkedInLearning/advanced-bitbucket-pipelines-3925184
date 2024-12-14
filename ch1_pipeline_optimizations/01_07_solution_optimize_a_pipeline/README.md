@@ -112,5 +112,5 @@ pipelines:
 
 <!-- FooterStart -->
 ---
-[← 01_06 Challenge: Optimize a Workflow in Bitbucket Pipelines](../01_06_challenge_optimize_a_pipeline/README.md) | [Advanced Bitbucket Pipelines: Automating Deployments & Managing Third Party Integrations →](../../README.md)
+[← 01_06 Challenge: Optimize a Workflow in Bitbucket Pipelines](../01_06_challenge_optimize_a_pipeline/README.md) | [02_01 Getting to Know Pipes →](../../ch2_using_pipes_in_pipelines/02_01_getting_to_know_pipes/README.md)
 <!-- FooterEnd -->
