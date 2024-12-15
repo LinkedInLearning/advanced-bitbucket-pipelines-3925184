@@ -22,5 +22,5 @@ For extra credit, run the pipeline to see the results!
 
 <!-- FooterStart -->
 ---
-[← 02_01 Getting to Know Pipes](../02_01_getting_to_know_pipes/README.md) | [Advanced Bitbucket Pipelines: Automating Deployments & Managing Third Party Integrations →](../../README.md)
+[← 02_01 Getting to Know Pipes](../02_01_getting_to_know_pipes/README.md) | [02_03 Set Up the AWS Environment →](../02_03_set_up_the_aws_environment/README.md)
 <!-- FooterEnd -->
