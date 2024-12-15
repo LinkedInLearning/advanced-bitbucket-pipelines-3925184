@@ -1,0 +1,23 @@
+image: atlassian/default-image:4
+
+pipelines:
+  default:
+    - step:
+        name: Collect Bitbucket Build Statistics
+        caches:
+          - docker
+        artifacts:
+          - "*.txt"
+        script:
+
+          - export FILENAME="builds-statistics-$(date +%Y-%m-%d).txt"
+
+          - pipe: atlassian/bitbucket-build-statistics:1.5.3
+            variables:
+              BITBUCKET_ACCESS_TOKEN: $STATISTICS_ACCESS_TOKEN
+              FILENAME: "$FILENAME"
+
+          - pipe: atlassian/bitbucket-upload-file:0.7.1
+            variables:
+              BITBUCKET_ACCESS_TOKEN: $STATISTICS_ACCESS_TOKEN
+              FILENAME: "*.txt"

@@ -1,0 +1,12 @@
+image: atlassian/default-image:4
+
+pipelines:
+  default:
+    - step:
+        name: Collect Bitbucket Build Statistics
+        artifacts:
+          - "*.txt"
+        # consider adding a cache for `docker`
+        script:
+          - echo "Add you solution here..."
+
