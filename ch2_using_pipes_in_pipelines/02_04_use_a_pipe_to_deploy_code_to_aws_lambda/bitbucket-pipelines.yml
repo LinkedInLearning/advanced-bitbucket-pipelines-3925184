@@ -1,0 +1,88 @@
+# Use the latest version of Python
+image: python:3
+
+definitions:
+  steps:
+    - step: &integration
+        name: Run Integration Tests
+        caches:
+          - pip
+        script:
+          - apt-get update -y
+          - apt-get install -qq zip
+          - make requirements
+          - make check
+          - make lint
+          - make test
+
+    - step: &build
+        name: Build
+        script:
+          - apt-get update -y
+          - apt-get install -qq zip
+          - make build
+        artifacts:
+          - lambda.zip
+
+    - step: &deploy
+        name: Deploy
+        caches:
+          - docker
+        script:
+          - apt-get update -y
+          - apt-get install -qq zip
+          - python create_function_configuration.py
+          - cat function_configuration.json
+
+          - pipe: atlassian/aws-lambda-deploy:1.12.0
+            variables:
+              FUNCTION_NAME: "$FUNCTION_NAME"
+              FUNCTION_CONFIGURATION: "./function_configuration.json"
+              ZIP_FILE: "lambda.zip"
+              COMMAND: "update"
+              WAIT: "true"
+
+          - make testdeployment URL=$URL VERSION=$BITBUCKET_COMMIT
+
+pipelines:
+  default:
+    - stage:
+        name: Integration
+        condition:
+          changesets:
+            includePaths:
+              - Makefile
+              - "**/*.py"
+              - "**/*.json"
+              - "**/*.html"
+              - "**/*.txt"
+        steps:
+          - step: *integration
+    - stage:
+        name: Staging
+        deployment: Staging
+        steps:
+          - step: *build
+          - step: *deploy
+
+  branches:
+    main:
+      - stage:
+          name: Integration
+          condition:
+            changesets:
+              includePaths:
+                - Makefile
+                - "**/*.py"
+                - "**/*.json"
+                - "**/*.html"
+                - "**/*.txt"
+          steps:
+            - step: *integration
+      - stage:
+          name: Production
+          deployment: Production
+          trigger: manual
+          steps:
+            - step: *build
+            - step: *deploy
