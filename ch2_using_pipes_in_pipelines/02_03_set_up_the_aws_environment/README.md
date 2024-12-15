@@ -14,13 +14,11 @@ Having the following items in place before starting this lab will help you have 
 
 ## Deploy the CloudFormation Template
 
-1. Log into your AWS account.  Access the CloudFormation homepage and select **Create Stack**.
+1. Log into your AWS account.  Access the CloudFormation homepage and select **Create stack**.
 
     ![create stack](./images/01-create-stack.png)
 
-1. On the create stack screen, select **Upload a Template File** and then  select **Choose file**.
-
-    ![](./images/02-upload-template.png)
+1. On the create stack screen, select **Upload a template file** and then  select **Choose file**.
 
     Using your system's file finder, browse to the location where the CloudFormation template is located.
 
@@ -28,29 +26,31 @@ Having the following items in place before starting this lab will help you have 
 
     Select **Next**.
 
-1. On the "Specify Stack Details" screen, enter a stack name.  Select **Next**.
+    ![upload template](./images/02-upload-template.png)
 
-    ![](./images/03-enter-stack-name.png)
+1. On the "**Specify stack details**" screen, **enter a stack name**.  Select **Next**.
 
-1. On the "Stack Options" screen, scroll down to the very bottom.
+    ![enter stack name](./images/03-enter-stack-name.png)
+
+1. On the "**Stack options**" screen, scroll down to the very bottom.
 
     Acknowledge that AWS CloudFormation might create IAM resources with custom names, and then select **Next**.
 
-    ![](./images/04-acknowledge-iam-resources.png)
+    ![acknowledge IAM resources](./images/04-acknowledge-iam-resources.png)
 
-1. On the "Review and Create" screen, scroll down to the bottom and select Submit.
+1. On the "Review and create" screen, scroll down to the bottom and select **Submit**.
 
-    ![](./images/05-submit.png)
+    ![submit](./images/05-submit.png)
 
 1. Selecting submit starts the stack creation process.
 
-    ![](./images/06-create-in-progress.png)
+    ![create in progress](./images/06-create-in-progress.png)
 
     Wait 2-3 minutes for the stack deployment to complete.
 
-    ![](./images/07-create-complete.png)
+    ![create complete](./images/07-create-complete.png)
 
-1. After the creation is complete, **Outputs** tab to see the values for:
+1. After the creation is complete, select the **Outputs** tab to see the values for:
 
     - AwsAccessKeyId
     - AwsDefaultRegion
@@ -60,16 +60,16 @@ Having the following items in place before starting this lab will help you have 
     - StagingFunctionName
     - StagingURL
 
-    > [!Warning]
+    > [!WARNING]
     > The values for `AwsAccessKeyId` and `AwsSecretAccessKey` are sensitive.  Treat them as your would a username and password.  Do not store them in publicly available repositories, files, or documents.
 
-    ![](./images/08-outputs.png)
+    ![outputs](./images/08-outputs.png)
 
 1. To validate the deployment, open the links for the **ProductionURL** and **StagingURL**.
 
-    ![](./images/09-production-url.png)
+    ![production url](./images/09-production-url.png)
 
-    ![](./images/10-staging-url.png)
+    ![staging url](./images/10-staging-url.png)
 
 <!-- FooterStart -->
 ---
