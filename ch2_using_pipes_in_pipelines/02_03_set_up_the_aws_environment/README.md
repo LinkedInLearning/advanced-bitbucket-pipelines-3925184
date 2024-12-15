@@ -70,9 +70,9 @@ Having the following items in place before starting this lab will help you have 
 
     ![staging url](./images/10-staging-url.png)
 
-[^1]: WARNING! The values for `AwsAccessKeyId` and `AwsSecretAccessKey` are sensitive.  Treat them as your would a username and pa    ssword.  Do not store them in publicly available repositories, files, or documents.
+[^1]: WARNING! The values for `AwsAccessKeyId` and `AwsSecretAccessKey` are sensitive.  Treat them as your would a username and password.  Do not store them in publicly available repositories, files, or documents.
 
 <!-- FooterStart -->
 ---
-[← 02_02 Use a pipe in a pipeline configuration](../02_02_use_a_pipe_in_a_pipeline_configuration/README.md) | [Advanced Bitbucket Pipelines: Automating Deployments & Managing Third Party Integrations →](../../README.md)
+[← 02_02 Use a pipe in a pipeline configuration](../02_02_use_a_pipe_in_a_pipeline_configuration/README.md) | [02_04 Use a pipe to deploy code to AWS Lambda →](../02_04_use_a_pipe_to_deploy_code_to_aws_lambda/README.md)
 <!-- FooterEnd -->
