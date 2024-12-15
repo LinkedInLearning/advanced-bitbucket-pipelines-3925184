@@ -52,7 +52,7 @@ Having the following items in place before starting this lab will help you have 
 
 1. After the creation is complete, select the **Outputs** tab to see the values for:
 
-    - AwsAccessKeyId
+    - AwsAccessKeyId [^1]
     - AwsDefaultRegion
     - AwsSecretAccessKey
     - ProductionFunctionName
@@ -60,8 +60,7 @@ Having the following items in place before starting this lab will help you have 
     - StagingFunctionName
     - StagingURL
 
-    > [!WARNING]
-    > The values for `AwsAccessKeyId` and `AwsSecretAccessKey` are sensitive.  Treat them as your would a username and password.  Do not store them in publicly available repositories, files, or documents.
+    > [!WARNING] The values for `AwsAccessKeyId` and `AwsSecretAccessKey` are sensitive.  Treat them as your would a username and password.  Do not store them in publicly available repositories, files, or documents.
 
     ![outputs](./images/08-outputs.png)
 
@@ -70,6 +69,8 @@ Having the following items in place before starting this lab will help you have 
     ![production url](./images/09-production-url.png)
 
     ![staging url](./images/10-staging-url.png)
+
+[^1]: WARNING! The values for `AwsAccessKeyId` and `AwsSecretAccessKey` are sensitive.  Treat them as your would a username and pa    ssword.  Do not store them in publicly available repositories, files, or documents.
 
 <!-- FooterStart -->
 ---
