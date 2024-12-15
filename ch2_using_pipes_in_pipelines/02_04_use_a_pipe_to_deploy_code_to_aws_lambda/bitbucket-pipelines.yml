@@ -59,7 +59,11 @@ pipelines:
         steps:
           - step: *integration
     - stage:
-        name: Staging
+        name: Build
+        steps:
+          - step: *build
+    - stage:
+        name: Deploy Staging
         deployment: Staging
         steps:
           - step: *build
@@ -80,7 +84,11 @@ pipelines:
           steps:
             - step: *integration
       - stage:
-          name: Production
+          name: Build
+          steps:
+            - step: *build
+      - stage:
+          name: Deploy Production
           deployment: Production
           trigger: manual
           steps:
