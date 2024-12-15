@@ -260,7 +260,7 @@ Outputs:
     Value:
       !GetAtt Keys.SecretAccessKey
 
-  AwsDefaultRegion:
-    Description: The AWS_DEFAULT_REGION where the stack is deployed.
+  AwsRegion:
+    Description: The AWS_REGION where the stack is deployed.
     Value:
       !Sub ${AWS::Region}
