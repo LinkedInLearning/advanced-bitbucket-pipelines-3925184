@@ -19,24 +19,30 @@ Use your knowledge of Bitbucket Pipelines to automate a solution for the CFO.
 1. Store the token as a repository variable named `STATISTICS_ACCESS_TOKEN`.
 1. Use the following script element to format the report name:
 
-        export FILENAME="builds-statistics-$(date +%Y-%m-%d).txt"
+    ```bash
+    export FILENAME="builds-statistics-$(date +%Y-%m-%d).txt"
+    ```
 
 1. Use the following pipes to generate and store the report:
 
     - [atlassian/bitbucket-build-statistics](https://bitbucket.org/atlassian/bitbucket-build-statistics/src/master/)
 
-          - pipe: atlassian/bitbucket-build-statistics:1.5.3
-            variables:
-              BITBUCKET_ACCESS_TOKEN: $STATISTICS_ACCESS_TOKEN
-              FILENAME: "$FILENAME"
+        ```yaml
+        - pipe: atlassian/bitbucket-build-statistics:1.5.3
+        variables:
+          BITBUCKET_ACCESS_TOKEN: $STATISTICS_ACCESS_TOKEN
+          FILENAME: "$FILENAME"
+        ```
 
     - [atlassian/bitbucket-upload-file](https://bitbucket.org/atlassian/bitbucket-upload-file/src/master/)
 
+        ```yaml
           - pipe: atlassian/bitbucket-upload-file:0.7.1
             variables:
               BITBUCKET_ACCESS_TOKEN: $STATISTICS_ACCESS_TOKEN
               FILENAME: "*.txt"
-
+        ```
+        
 This challenge should take 10-15 minutes to complete.
 
 ## Solution
