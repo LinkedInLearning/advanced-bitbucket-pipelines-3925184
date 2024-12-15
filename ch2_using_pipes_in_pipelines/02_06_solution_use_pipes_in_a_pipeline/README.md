@@ -42,7 +42,7 @@ Use your knowledge of Bitbucket Pipelines to automate a solution for the CFO.
               BITBUCKET_ACCESS_TOKEN: $STATISTICS_ACCESS_TOKEN
               FILENAME: "*.txt"
         ```
-        
+
 This challenge should take 10-15 minutes to complete.
 
 ## Solution
