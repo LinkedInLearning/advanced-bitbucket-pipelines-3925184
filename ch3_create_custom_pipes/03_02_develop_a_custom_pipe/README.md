@@ -47,7 +47,7 @@ Selecting **New Simple Pipe** will create the following files in the current dir
 > When the wizard asks _"What is the name of your Bitbucket account (e.g. my-account)?"_ Enter the **WORKSPACE** that contains the repo for the pipe.  Entering your Bitbucket account name will cause 404s in the  generated URLs for the pipe
 
 > [!WARNING]
-> The value you provide in response to _"What your repository name (e.g. ftp-deploy)?"_[^1] and _"What is your Docker Hub account (e.g. atlassian)?"_ will be used to generate the pipeline script for pushing the pipe image to a Docker Hub repository.  Edit the `bitbucket-pipelines.yml` to resolve any conflicts.
+> The values you provide in response to _"What your repository name (e.g. ftp-deploy)?"_[^1] and _"What is your Docker Hub account (e.g. atlassian)?"_ will be used to generate the pipeline script for pushing the pipe image to a Docker Hub repository.  Edit the `bitbucket-pipelines.yml` to resolve any conflicts.
 
 Selecting **New Advanced Pipe** will create the following files in the current directory:
 
