@@ -6,7 +6,6 @@ pipelines:
         name: Collect Bitbucket Build Statistics
         artifacts:
           - "*.txt"
-        # consider adding a cache for `docker`
+        # consider adding a cache for `docker` once the pipes are in place
         script:
           - echo "Add you solution here..."
-

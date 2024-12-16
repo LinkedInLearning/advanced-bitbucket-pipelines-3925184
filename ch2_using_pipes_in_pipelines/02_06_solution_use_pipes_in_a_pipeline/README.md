@@ -2,7 +2,7 @@
 
 ## Challenge Scenario
 
-In this challenge you’re continuing your role as the Bitbucket Pipelines expert supporting the Amazing Mobile App.
+In this challenge you're continuing your role as the Bitbucket Pipelines expert supporting the Amazing Mobile App.
 
 As planning begins for the next fiscal year, the CFO has come to you and asked if there's a way to get a report of the build minutes being used across all of the companies repositories.  Specifically, they need to know which builds are taking the longest amount of time and how many build minutes are being used.  They'd also like to capture this information on a regular basis.
 
@@ -49,17 +49,15 @@ This challenge should take 10-15 minutes to complete.
 
 Create a new repository and add the exercise files.
 
-1. Download the exercise files
-1. Clone the Bitbucket repo
-1. Move the files into your Bitbucket repo
-1. Push the files up to Bitbucket
-
-Run the pipeline once to make sure pipelines are enabled before proceeding.
+Run the pipeline once to make sure pipelines are enabled and working before proceeding.
 
 ### Create an Access Token
 
 1. Select **Repository settings** -> **Access tokens** -> **Create Repository Access Token**.
-1. Name the token `Statistics Collection`.
+
+    ![Create Access Token](./images/00000_create-access-token-0.png)
+
+1. Name the token `Statistics`.
 1. Select the permission to include:
 
     - `Repositories:Write`
@@ -67,14 +65,25 @@ Run the pipeline once to make sure pipelines are enabled before proceeding.
 
    Select **Create**.
 
-1. Select this stacked squares icon for the first entry in the list of tokens to copy the token to my clipboard. Click out of the dialog.
+    ![Create Access Token Details](./images/00001_create-access-token-1.png)
+
+1. Select the stacked squares icon for the first entry in the list of tokens to copy the token to my clipboard. Click out of the dialog.
+
+    ![Copy Access Token](./images/00002_copy-access-token.png)
+
 1. Select **Repository variables**.
 1. Paste the value for the access token into the second field and then enter the name `STATISTICS_ACCESS_TOKEN`. Select **Add**.
+
+    ![Create Repository Variable](./images/00003_create-repository-variable.png)
+
 
 ### Create the Pipeline Configuration
 
 1. Edit the pipeline configuration.
 1. Add a cache for `docker`.
+
+    ![Edit Pipeline](./images/00004_edit-pipeline.png)
+
 1. Add the following script elements:
 
     1. export the filename as a variable using the format indicated in the challenge requirements
@@ -84,57 +93,16 @@ Run the pipeline once to make sure pipelines are enabled before proceeding.
 ### Check the Results
 
 1. Run the pipeline and confirm that the report is generated as expected.
+
+    ![Run Pipeline](./images/00005_run-pipeline.png)
+
 1. From the left-side menu, select **Downloads**.
 1. Select the most recently generated report and save it to your local system.
 1. Review the contents of the report.
 
+    ![Download Report](./images/00006_download-report.png)
+
 The completed pipeline should be similar to the following: [bitbucket-pipelines.yml](./bitbucket-pipelines.yml)
-
-```yaml
-image: atlassian/default-image:4
-
-pipelines:
-  default:
-    - step:
-        name: Collect Bitbucket Build Statistics
-        caches:
-          - docker
-        script:
-
-          - export FILENAME="builds-statistics-$(date +%Y-%m-%d).txt"
-
-          - pipe: atlassian/bitbucket-build-statistics:1.5.3
-            variables:
-              BITBUCKET_ACCESS_TOKEN: $STATISTICS_ACCESS_TOKEN
-              FILENAME: "$FILENAME"
-
-          - pipe: atlassian/bitbucket-upload-file:0.7.1
-            variables:
-              BITBUCKET_ACCESS_TOKEN: $STATISTICS_ACCESS_TOKEN
-              FILENAME: "*.txt"
-
-        artifacts:
-          - "*.txt"
-```
-
-And the build usage report should be simliar to the following:
-
-```text
-+------------------------------------------------------------------------------+
-|                           Repository build details                           |
-+-------------------------------+--------+----------------+--------------------+
-| Repository                    | Builds | Build Duration | Build Minutes Used |
-+-------------------------------+--------+----------------+--------------------+
-| amazing_app/caches            |   24   |  0d 0h 7m 47s  |    0d 0h 7m 30s    |
-| amazing_app/caches-2          |   2    |  0d 0h 1m 2s   |    0d 0h 1m 0s     |
-| amazing_app/monorepo          |   10   |  0d 0h 2m 48s  |    0d 0h 2m 41s    |
-| amazing_app/ch1-challenge     |   14   | 0d 0h 21m 29s  |   0d 0h 21m 23s    |
-| amazing_app/ch1-solution      |   5    |  0d 0h 4m 30s  |    0d 0h 4m 28s    |
-| amazing_app/pipes-first-look  |   22   | 0d 0h 11m 34s  |   0d 0h 11m 29s    |
-| amazing_app/pipes-second-look |   44   | 0d 0h 40m 32s  |   0d 0h 42m 12s    |
-| amazing_app/build-statistics  |   3    |  0d 0h 1m 50s  |    0d 0h 1m 48s    |
-+-------------------------------+--------+----------------+--------------------+
-```
 
 <!-- FooterStart -->
 ---
