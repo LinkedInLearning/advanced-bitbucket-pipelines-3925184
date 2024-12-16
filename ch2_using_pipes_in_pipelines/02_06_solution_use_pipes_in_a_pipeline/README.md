@@ -84,9 +84,9 @@ Run the pipeline once to make sure pipelines are enabled and working before proc
 
     ![Edit Pipeline](./images/00004_edit-pipeline.png)
 
-1. Add the following script elements:
+1. Add the following script elements as described in the challenge task list:
 
-    1. export the filename as a variable using the format indicated in the challenge requirements
+    1. export the filename as an environment variable using the format indicated
     1. add a pipe to generate the build statistics report
     1. add a pipe to write the report to the **Downloads** page in the repository
 
@@ -106,5 +106,5 @@ The completed pipeline should be similar to the following: [bitbucket-pipelines.
 
 <!-- FooterStart -->
 ---
-[← 02_05 Challenge: Use Pipes in a Pipeline](../02_05_challenge_use_pipes_in_a_pipeline/README.md) | [Advanced Bitbucket Pipelines: Automating Deployments & Managing Third Party Integrations →](../../README.md)
+[← 02_05 Challenge: Use Pipes in a Pipeline](../02_05_challenge_use_pipes_in_a_pipeline/README.md) | [03_01 When to Use Custom Pipes →](../../ch3_create_custom_pipes/03_01_when_to_use_custom_pipes/README.md)
 <!-- FooterEnd -->
