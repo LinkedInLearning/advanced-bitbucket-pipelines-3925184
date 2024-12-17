@@ -60,5 +60,5 @@ Apache 2.0 licensed, see [LICENSE](LICENSE.txt) file.
 
 <!-- FooterStart -->
 ---
-[← Bitbucket Pipelines Pipe: example](../advanced-bash/README.md) | [03_03 Test a Custom Pipe →](../../03_03_test_a_custom_pipe/README.md)
+[← 03_02 Develop a Custom Pipe](../README.md) | [03_03 Test a Custom Pipe →](../../03_03_test_a_custom_pipe/README.md)
 <!-- FooterEnd -->

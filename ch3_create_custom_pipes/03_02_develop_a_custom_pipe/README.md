@@ -7,7 +7,7 @@
 >
 > You should have a [Docker Hub](https://hub.docker.com/) account before proceeding.
 
-The [generator-bitbucket-pipes](https://www.npmjs.com/package/generator-bitbucket-pipe) is useful for quickly getting started with pipe development.  Its as easy as `1`, `2`, `3`.
+The [bitbucket-pipes generator](https://www.npmjs.com/package/generator-bitbucket-pipe) is useful for quickly getting started with pipe development.  Its as easy as `1`, `2`, `3`.
 
 | #  | Step  | Details / Commands |
 |----|-------|--------------------|
@@ -84,7 +84,7 @@ After you have the pipe template files in place, implement your custom solution.
 |---|-------|--------------------|
 | 1 | Edit `pipe.py` or `pipe.sh` | Use your favorite editor or IDE to add your code to the provided scripts |
 | 2 | Add your custom code | Update the script to implement your goals, dreams, and aspirations |
-| 3 | Push the code to the repo | `git add .`<br>`git commit -m 'create pipe'`<br>`git commit -m “create pipe”` |
+| 3 | Push the code to the repo | `git add .`<br>`git commit -m 'create pipe'`<br>`git push --set-upstream origin feature/create-pipe` |
 
 ## Shenanigans
 
@@ -135,5 +135,5 @@ The morals of this look back in time are:
 
 <!-- FooterStart -->
 ---
-[← 03_01 When to Use Custom Pipes](../03_01_when_to_use_custom_pipes/README.md) | [Bitbucket Pipelines Pipe: example →](advanced-bash/README.md)
+[← 03_01 When to Use Custom Pipes](../03_01_when_to_use_custom_pipes/README.md) | [Bitbucket Pipelines Pipe: example →](advanced-python/README.md)
 <!-- FooterEnd -->

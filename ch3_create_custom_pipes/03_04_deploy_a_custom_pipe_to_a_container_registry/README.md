@@ -6,5 +6,5 @@
 
 <!-- FooterStart -->
 ---
-[← Bitbucket Pipelines Pipe: example](../03_03_test_a_custom_pipe/advanced-python/README.md) | [Advanced Bitbucket Pipelines: Automating Deployments & Managing Third Party Integrations →](../../README.md)
+[← pytest cache directory #](../03_03_test_a_custom_pipe/advanced-python/.pytest_cache/README.md) | [Advanced Bitbucket Pipelines: Automating Deployments & Managing Third Party Integrations →](../../README.md)
 <!-- FooterEnd -->
