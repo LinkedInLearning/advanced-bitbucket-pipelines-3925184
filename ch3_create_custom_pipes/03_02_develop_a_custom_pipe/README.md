@@ -53,6 +53,8 @@ Selecting **New Simple Pipe** will create the following files in the current dir
 > [!IMPORTANT]
 > The "Advanced Pipe" is also known as the "Complete Pipe".
 
+![Prompt for Bitbucket Account](./images/04-workspace-name.png)
+
 > [!WARNING]
 > When the wizard asks _"What is the name of your Bitbucket account (e.g. my-account)?"_ Enter the **WORKSPACE** that contains the repo for the pipe.  Entering your Bitbucket account name will cause 404s in the  generated URLs for the pipe
 
@@ -126,7 +128,7 @@ What is the name of your Bitbucket account (e.g. my-account)?
 
 Unfortunately, the code hasn't been updated to match the new way of organizing content on the Atlassian and Bitbucket platforms.
 
-The morals of this look back in time are:
+The morals of this history lesson are:
 
 - respond to the prompt with your workspace name (not your account name!)
 - if you can, try to keep your code up to date with changes :)
