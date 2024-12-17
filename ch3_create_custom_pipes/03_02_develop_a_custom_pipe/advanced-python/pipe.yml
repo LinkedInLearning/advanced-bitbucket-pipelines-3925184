@@ -1,0 +1,14 @@
+name: example
+image: example/example:0.0.0
+description: example
+category: example
+repository: https://bitbucket.org/example/example
+vendor:
+  name: example
+  website: example
+maintainer:
+  name: example
+  website: example
+tags:
+    - example
+  

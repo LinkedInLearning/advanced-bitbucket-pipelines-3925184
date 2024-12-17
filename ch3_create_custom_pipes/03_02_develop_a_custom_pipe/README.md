@@ -9,12 +9,12 @@
 
 The [generator-bitbucket-pipes](https://www.npmjs.com/package/generator-bitbucket-pipe) is useful for quickly getting started with pipe development.  Its as easy as `1`, `2`, `3`.
 
-| # | Step  | Details / Commands |
-|---|-------|--------------------|
-|1| Create a Bitbucket repo and clone it to your local system | `git clone git@bitbucket.org:WORKSPACE_NAME/REPO_NAME.git` |
-|1.5| Create a branch in the repo | `git co -b feature/create-pipe` |
-|2| Use `npm` to install `yo` and `generator-bitbucket-pipes` | `npm install -g yo generator-bitbucket-pipe` |
-|3| Run the generator inside the cloned repo | `yo bitbucket-pipe` |
+| #  | Step  | Details / Commands |
+|----|-------|--------------------|
+|1   | Create a Bitbucket repo and clone it to your local system | `git clone git@bitbucket.org:WORKSPACE_NAME/REPO_NAME.git` |
+|1.5 | Create a branch in the repo | `git co -b feature/create-pipe` |
+|2   | Use `npm` to install `yo` and `generator-bitbucket-pipes` | `npm install -g yo generator-bitbucket-pipe` |
+|3   | Run the generator inside the cloned repo | `yo bitbucket-pipe` |
 
 The wizard will prompt you to create one of the following:
 
@@ -28,16 +28,25 @@ The wizard will prompt you to create one of the following:
 >
 > Just update the `Dockerfile` to support the target runtime and remove other files as needed.
 
+You can use the following links to review the files created by the pipe generator:
+
+| Pipe template   | Generated Script                                         |
+|---------------- |----------------------------------------------------------|
+| advanced-python | [Advanced Python script](./advanced-python/pipe/pipe.py) |
+| advanced-bash   | [Advanced Bash script](./advanced-bash/pipe/pipe.sh)     |
+| simple-python   | [Simple Python script](./simple-python/pipe.py)          |
+| simple-bash     | [Simple Bash script](./simple-bash/pipe.sh)              |
+
 ### Simple Pipe
 
 Selecting **New Simple Pipe** will create the following files in the current directory:
 
-| File                    | Description |
-|-------------------------|-------------|
-| bitbucket-pipelines.yml | Pipeline configuration for testing and deploying the pipe to Docker Hub |
-| Dockerfile              | Docker configuration to create the pipe's image |
-| pipe.sh or pipe.py      | A script template |
-| requirements.txt        | Libraries to install for Python pipes |
+| File                    | Description                                                                |
+|-------------------------|----------------------------------------------------------------------------|
+| bitbucket-pipelines.yml | Pipeline configuration for testing and deploying the pipe to Docker Hub    |
+| Dockerfile              | Docker configuration to create the pipe's image                            |
+| pipe.sh or pipe.py      | A script template                                                          |
+| requirements.txt        | Libraries to install for Python pipes                                      |
 
 ### Complete / Advanced Pipe
 
@@ -126,5 +135,5 @@ The morals of this look back in time are:
 
 <!-- FooterStart -->
 ---
-[← 03_01 When to Use Custom Pipes](../03_01_when_to_use_custom_pipes/README.md) | [03_03 Test a Custom Pipe →](../03_03_test_a_custom_pipe/README.md)
+[← 03_01 When to Use Custom Pipes](../03_01_when_to_use_custom_pipes/README.md) | [Bitbucket Pipelines Pipe: example →](advanced-bash/README.md)
 <!-- FooterEnd -->

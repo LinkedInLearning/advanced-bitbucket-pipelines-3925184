@@ -1,0 +1,33 @@
+image:
+  name: atlassian/default-image:3
+
+test: &test
+  step:
+    name: Test
+    script:
+      - npm install -g bats
+      - chmod a+x test/*.bats
+      - bats test/test.bats
+    services:
+      - docker
+
+push: &push
+  step:
+    name: Push and Tag
+    image: python:3.10
+    script:
+      - pipe: atlassian/bitbucket-pipe-release:5.6.0
+        variables:
+          REGISTRY_USERNAME: $REGISTRY_USERNAME
+          REGISTRY_PASSWORD: $REGISTRY_PASSWORD
+          IMAGE: example/$BITBUCKET_REPO_SLUG
+    services:
+      - docker
+
+pipelines:
+  default:
+  - <<: *test
+  branches:
+    master:
+    - <<: *test
+    - <<: *push
