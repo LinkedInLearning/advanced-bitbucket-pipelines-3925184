@@ -26,7 +26,7 @@
 | Resource | Link |
 |----------|------|
 | Official documentation for creating Bitbucket Pipes | [Write a pipe for Bitbucket Pipelines](https://support.atlassian.com/bitbucket-cloud/docs/write-a-pipe-for-bitbucket-pipelines/) |
-| A Yeoman generator for creating Bitbucket Pipes | [generator-bitbucket-pipes](https://www.npmjs.com/package/generator-bitbucket-pipe) |
+| A Yeoman generator for creating Bitbucket Pipes | [NPM: generator-bitbucket-pipes](https://www.npmjs.com/package/generator-bitbucket-pipe)<br>[Repo: bitbucket-pipe-release](https://bitbucket.org/atlassian/bitbucket-pipe-release/src/master/)|
 | A Python library for developing Bitbucket Pipes | [bitbucket-pipes-toolkit](https://bitbucket.org/bitbucketpipelines/bitbucket-pipes-toolkit/src/master/) |
 | A Bash library for developing Bitbucket Pipes | [bitbucket-pipes-toolkit-bash](https://bitbucket.org/bitbucketpipelines/bitbucket-pipes-toolkit-bash/src/master/) |
 | A simple pipe example using Bash | [demo-simple-pipe](https://bitbucket.org/bitbucketpipelines/demo-pipe-simple/src/master/) |

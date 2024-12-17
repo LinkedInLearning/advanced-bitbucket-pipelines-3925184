@@ -11,8 +11,9 @@ The [generator-bitbucket-pipes](https://www.npmjs.com/package/generator-bitbucke
 
 | # | Step  | Details / Commands |
 |---|-------|--------------------|
-|1| Use `npm` to install `yo` and `generator-bitbucket-pipes` | `npm install -g yo generator-bitbucket-pipe` |
-|2| Create a Bitbucket repo andn clone it to your local system | `git clone git@bitbucket.org:WORKSPACE_NAME/REPO_NAME.git` |
+|1| Create a Bitbucket repo and clone it to your local system | `git clone git@bitbucket.org:WORKSPACE_NAME/REPO_NAME.git` |
+|1.5| Create a branch in the repo | `git co -b feature/create-pipe` |
+|2| Use `npm` to install `yo` and `generator-bitbucket-pipes` | `npm install -g yo generator-bitbucket-pipe` |
 |3| Run the generator inside the cloned repo | `yo bitbucket-pipe` |
 
 The wizard will prompt you to create one of the following:
@@ -33,7 +34,7 @@ Selecting **New Simple Pipe** will create the following files in the current dir
 
 | File                    | Description |
 |-------------------------|-------------|
-| bitbucket-pipelines.yml | Pipeline configuration for testing and deploying the pipe to Dockerhub |
+| bitbucket-pipelines.yml | Pipeline configuration for testing and deploying the pipe to Docker Hub |
 | Dockerfile              | Docker configuration to create the pipe's image |
 | pipe.sh or pipe.py      | A script template |
 | requirements.txt        | Libraries to install for Python pipes |
@@ -53,7 +54,7 @@ Selecting **New Advanced Pipe** will create the following files in the current d
 
 | File                      | Description |
 |---------------------------|-------------|
-| bitbucket-pipelines.yml   | Pipeline configuration for testing and deploying the pipe to Dockerhub |
+| bitbucket-pipelines.yml   | Pipeline configuration for testing and deploying the pipe to Docker Hub |
 | Dockerfile                | Docker configuration to create the pipe's image |
 | pipe.yml                  | Metadata file describing the pipe's inputs, outputs and configuration |
 | pipe/pipe.sh or pipe.py   | Main pipe implementation script in Bash or Python |
@@ -68,11 +69,62 @@ Selecting **New Advanced Pipe** will create the following files in the current d
 
 ## Developing Your Pipe
 
-After you have the pipe template files in place, modify the files as needed to implement your custom solution.
+After you have the pipe template files in place, implement your custom solution.  Again, easy as `1`, `2`, `3`.
+
+| # | Step  | Details / Commands |
+|---|-------|--------------------|
+| 1 | Edit `pipe.py` or `pipe.sh` | Use your favorite editor or IDE to add your code to the provided scripts |
+| 2 | Add your custom code | Update the script to implement your goals, dreams, and aspirations |
+| 3 | Push the code to the repo | `git add .`<br>`git commit -m 'create pipe'`<br>`git commit -m “create pipe”` |
+
+## Shenanigans
+
+Why does `yo bitbucket-pipe` ask for your account name?
+
+Let's get into it.
+
+## Part 1: The History of Bitbucket URLs with Account Name vs Workspace Name
+
+Some time ago, Bitbucket used your account name to create URLs.  So you could reference repositories like this:
+
+```text
+https://bitbucket.org/ACCOUNT_NAME/REPO_NAME/src/main/
+```
+
+At some point, Atlassian changed the approach to use workspace names instead of account names for repo URLs.  So now things look like this:
+
+```text
+https://bitbucket.org/WORKSPACE_NAME/REPO_NAME/src/main/
+```
+
+I'm not sure what prompted the change, but I wonder if it was related to people changing their account names and not being able to find repositories.
+
+This article gives some insight into the ramifications of changing a workspace name: [Change a workspace ID](https://support.atlassian.com/bitbucket-cloud/docs/change-a-workspace-id/).
+
+> Changing your workspace ID will change the URL for all associated repositories, snippets, and any static websites you're hosting on Bitbucket Cloud.
+
+I'm sure those same things would apply to a situation where the account name was used for URLs and then changed to something else.
+
+## Part 2: The Lingering Affects of Bitbucket URLs with Account Name vs Workspace Name
+
+I've looked but can't find the repo for the `generator-bitbucket-pipe` code. It looks like the [oldest version for the NPM package](https://www.npmjs.com/package/generator-bitbucket-pipe/v/0.1.0) was published 6 years ago as of January 2024.
+
+This leads to the assumption that when the generator was written, Bitbucket still allowed for account names in repository URLs.  Which then leads to the use of the following prompt:
+
+```text
+What is the name of your Bitbucket account (e.g. my-account)?
+```
+
+Unfortunately, the code hasn't been updated to match the new way of organizing content on the Atlassian and Bitbucket platforms.
+
+The morals of this look back in time are:
+
+- respond to the prompt with your workspace name (not your account name!)
+- if you can, try to keep your code up to date with changes :)
 
 [^1]: That's Atlassian's grammar...not mine! :D ~MJ
 
 <!-- FooterStart -->
 ---
-[← 03_01 When to Use Custom Pipes](../03_01_when_to_use_custom_pipes/README.md) | [Advanced Bitbucket Pipelines: Automating Deployments & Managing Third Party Integrations →](../../README.md)
+[← 03_01 When to Use Custom Pipes](../03_01_when_to_use_custom_pipes/README.md) | [03_03 Test a Custom Pipe →](../03_03_test_a_custom_pipe/README.md)
 <!-- FooterEnd -->
