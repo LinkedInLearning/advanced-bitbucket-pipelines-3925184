@@ -105,11 +105,13 @@ Depending on the template you select using the `bitbucket-pipe` template, you ma
 
 However, the pipeline configuration may not use those variables, instead favoring `REGISTRY_USERNAME` and `DOCKERHUB_USERNAME`:
 
-![REGISTRY prefixes instead of DOCKERHUB](./images/00-registry-prefixes.png)
+![REGISTRY prefixes instead of DOCKERHUB](./images/07-registry-prefixes.png)
 
 As a result, you may see errors in your pipeline run:
 
-![Access Denied error in pipeline](./images/00-docker-push-error.png)
+![Access Denied error in pipeline](./images/06-docker-push-error.png)
+
+Either update your variables to match the pipeline configuration....or update the configuration to match your variables.
 
 ### 03_02.2-PART_1: The History of Bitbucket URLs with Account Name vs Workspace Name
 
