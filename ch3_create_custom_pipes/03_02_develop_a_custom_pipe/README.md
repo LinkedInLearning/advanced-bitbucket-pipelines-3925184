@@ -82,19 +82,40 @@ Selecting **New Advanced Pipe** will create the following files in the current d
 
 After you have the pipe template files in place, implement your custom solution.  Again, easy as `1`, `2`, `3`.
 
-| # | Step  | Details / Commands |
-|---|-------|--------------------|
-| 1 | Edit `pipe.py` or `pipe.sh` | Use your favorite editor or IDE to add your code to the provided scripts |
-| 2 | Add your custom code | Update the script to implement your goals, dreams, and aspirations |
-| 3 | Push the code to the repo | `git add .`<br>`git commit -m 'create pipe'`<br>`git push --set-upstream origin feature/create-pipe` |
+> [!IMPORTANT]
+> Note the `2.5` step for installing and running the `semversioner` command.
+> Having it in place will be key to getting your code deployed using the provided pipeline configuration which uses the `atlassian/bitbucket-pipe-release` pipe.  Semantic versioning tracking is required by the release pipe.
+
+
+
+| #   | Step  | Details / Commands |
+|-----|-------|--------------------|
+| 1   | Edit `pipe.py` or `pipe.sh` | Use your favorite editor or IDE to add your code to the provided scripts |
+| 2   | Add your custom code | Update the script to implement your goals, dreams, and aspirations |
+| 2.5 | Add semantic versioning<br>[Reference for Semver usage](https://bitbucket.org/atlassian/bitbucket-pipe-release/src/master/CONTRIBUTING.md) _(scroll down to **Release process**)_ | `pip install semversioner`<br>`semversioner add-change --type minor --description "create pipe"` |
+| 3   | Push the code to the repo | `git add .`<br>`git commit -m 'create pipe'`<br>`git push --set-upstream origin feature/create-pipe` |
 
 ## Shenanigans
 
-Why does `yo bitbucket-pipe` ask for your account name?
+### Shenanigan 03_02.1: Which Variable is the Pipeline Looking For? `DOCKERHUB_` or `REGISTRY_`?
+
+Depending on the template you select using the `bitbucket-pipe` template, you may see the following:
+
+> Note: Add the repository variables "DOCKERHUB_USERNAME" and "DOCKERHUB_PASSWORD" to Bitbucket Pipelines.
+
+However, the pipeline configuration may not use those variables, instead favoring `REGISTRY_USERNAME` and `DOCKERHUB_USERNAME`:
+
+![REGISTRY prefixes instead of DOCKERHUB](./images/00-registry-prefixes.png)
+
+As a result, you may see errors in your pipeline run:
+
+![Access Denied error in pipeline](./images/00-docker-push-error.png)
+
+### Shenanigan 03_02.2-PART_1: The History of Bitbucket URLs with Account Name vs Workspace Name
+
+> Why does `yo bitbucket-pipe` ask for "account name"?
 
 Let's get into it.
-
-## Part 1: The History of Bitbucket URLs with Account Name vs Workspace Name
 
 Some time ago, Bitbucket used your account name to create URLs.  So you could reference repositories like this:
 
@@ -116,7 +137,7 @@ This article gives some insight into the ramifications of changing a workspace n
 
 I'm sure those same things would apply to a situation where the account name was used for URLs and then changed to something else.
 
-## Part 2: The Lingering Affects of Bitbucket URLs with Account Name vs Workspace Name
+## Shenanigan 03_02.2-PART_2: The Lingering Affects of Bitbucket URLs with Account Name vs Workspace Name
 
 I've looked but can't find the repo for the `generator-bitbucket-pipe` code. It looks like the [oldest version for the NPM package](https://www.npmjs.com/package/generator-bitbucket-pipe/v/0.1.0) was published 6 years ago as of January 2024.
 
