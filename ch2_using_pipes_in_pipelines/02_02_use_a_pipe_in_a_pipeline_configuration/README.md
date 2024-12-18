@@ -11,10 +11,12 @@
 
 ## Shenanigans
 
+## 02_02.1 Using Publicly Available Containers as Pipes
+
 Approved pipes are sourced from container registries hosted by Bitbucket.
 
 > [!Important]
-> But because pipes are essentially container images, we can run any publicly available container as a pipe!
+> Since pipes are essentially container images, we can run any publicly available container as a pipe!
 
 Review the contents of this [pipeline configuration](./Shenanigans/bitbucket-pipelines.yml) to see how`hello-world` images from [Docker Hub](https://hub.docker.com/) and the [Amazon Elastic Container Registry Public Gallery](https://gallery.ecr.aws/) are used as pipes in a pipeline.
 

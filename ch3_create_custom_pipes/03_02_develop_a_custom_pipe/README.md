@@ -97,7 +97,7 @@ After you have the pipe template files in place, implement your custom solution.
 
 ## Shenanigans
 
-### Shenanigan 03_02.1: Which Variable is the Pipeline Looking For? `DOCKERHUB_` or `REGISTRY_`?
+### 03_02.1: Which Variable is the Pipeline Looking For? `DOCKERHUB_` or `REGISTRY_`?
 
 Depending on the template you select using the `bitbucket-pipe` template, you may see the following:
 
@@ -111,7 +111,7 @@ As a result, you may see errors in your pipeline run:
 
 ![Access Denied error in pipeline](./images/00-docker-push-error.png)
 
-### Shenanigan 03_02.2-PART_1: The History of Bitbucket URLs with Account Name vs Workspace Name
+### 03_02.2-PART_1: The History of Bitbucket URLs with Account Name vs Workspace Name
 
 > Why does `yo bitbucket-pipe` ask for "account name"?
 
@@ -137,7 +137,7 @@ This article gives some insight into the ramifications of changing a workspace n
 
 I'm sure those same things would apply to a situation where the account name was used for URLs and then changed to something else.
 
-## Shenanigan 03_02.2-PART_2: The Lingering Affects of Bitbucket URLs with Account Name vs Workspace Name
+## 03_02.2-PART_2: The Lingering Affects of Bitbucket URLs with Account Name vs Workspace Name
 
 I've looked but can't find the repo for the `generator-bitbucket-pipe` code. It looks like the [oldest version for the NPM package](https://www.npmjs.com/package/generator-bitbucket-pipe/v/0.1.0) was published 6 years ago as of January 2024.
 
