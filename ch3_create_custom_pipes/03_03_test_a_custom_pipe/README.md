@@ -67,7 +67,7 @@ test.bats
 
 ## Shenanigans
 
-### 03_03.1 Tests Create Compiled Bytecode but the Files Aren't Ignored
+### 03_03.1: Tests Create Compiled Bytecode but the Files Aren't Ignored
 
 The `bitbucket-pipe` generator creates a `.gitignore` file that's meager by modern development standards:
 
