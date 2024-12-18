@@ -2,54 +2,60 @@
 
 ## Challenge Scenario
 
-The Amazing Mobile App finance team is working on a CI/CD pipeline that requires an enhanced pipe for generating reports in JSON. As the resident Bitbucket Pipelines expert, you've been asked to demonstrate how they can add functionality to code generated using with the "Advanced Python" pipe template.
+The world-renowned Amazing Mobile App is expanding!  Their new strategy will allow business partners to integrate with the mobile app directly from their deployment pipelines using APIs.
 
-Using the code provided in the exercise files for this lesson, make the changes requested and confirm all the tests pass.
+The initiative is led by the Amazing Library for Phone Hooks and APIs (ALPHA) Team. The ALPHA Team is planning to base the new integration on credentials that include an API key and a Customer ID.
+
+Before implementing the API interface, the ALPHA team is asking you to a demonstrate how customers can use a pipe to call the ALPHA API. They've asked you to update their code (which was generated using a Python-based Complete Pipe template) to use the `CUSTOMER_ID` parameter instead of the `NAME` parameter.
+
+All the code you need for this challenge can be found in the exercise files.
+
+Review the notes in the following sections for the tools and techniques you’ll use to solve this challenge:
+
+- [03_02 Develop a Custom Pipe](../03_02_develop_a_custom_pipe/README.md)
+- [03_03 Test a custom pipe](../03_03_test_a_custom_pipe/README.md)
 
 ## Challenge Tasks
 
-> [!IMPORTANT]
-> Review the notes in [03_02 Develop a Custom Pipe](../03_02_develop_a_custom_pipe/README.md) for details on the tools you'll need to have installed
+1. **Run the Test Suite**:
 
-1. **Implement New Functionality:**
+    After getting the files in place, run the `pytest` test suite to confirm that the code is working before you make any changes:
 
-   - Add a new function to `pipe/pipe.py` that generates a JSON summary.
-   - Modify the existing script to call the function and print the value returned.
-   - Use the following code:
+    ```bash
+    pytest --verbose test/test*.py
+    ```
 
-        ```python
-        import json
+1. **Explore the Provided Code**:
 
-        def generate_summary(params):
-            # Convert parameters to a JSON string
-            return json.dumps(params, indent=2)
-        ```
+    Review the following files to see how the `NAME` parameter is being used and tested:
 
-2. **Update Tests:**
+    - `pipe/pipe.py`
+    - `test/test.py`
 
-   - Add test cases to `test/test.py` to validate the new functionality.
-   - Ensure the tests confirm the correctness of the JSON summary format and content.
+1. **Update the Code**:
 
-       *Example test case:*
+    Complete the following:
 
-        ```python
-        def test_generate_summary():
-            test_values = { "dataset": "dataset.csv", "model": "model.pkl", "summary": "summary.txt" }
-            test_result = generate_summary(test_values)
-            assert '"dataset": "dataset.csv"' in test_result
-            assert '"model": "model.pkl"' in test_result
-            assert '"summary": "summary.txt"' in test_result
-        ```
+    - Replace `NAME` with `CUSTOMER_ID` throughout the `pipe.py` file.
+    - Adjust any associated variables as needed.
+    - Update the success message to include the value of `CUSTOMER_ID`.  That is, for `CUSTOMER_ID=DEC041906` The message should read as follows:
 
-3. **Run and Validate Tests:**
+    ```python
+    "CUSTOMER_ID DEC041906 processed successfully!"
+    ```
 
-   - Use `pytest` to run the tests in the `test/` directory.
+1. **Update the Tests**:
 
-        ```bash
-        pytest --verbose test/test*.py
-        ```
+    Complete the following:
 
-   - Confirm all tests pass.
+   - Modify `test.py` to replace all instances of `NAME` with `CUSTOMER_ID`.
+   - Update test cases to validate the new parameter and success message.
+
+1. **Validate the Changes**:
+
+    Run the `pytest` test suite again to confirm the changes were applied correctly.
+
+This challenge should take 10-15 minutes to complete.
 
 <!-- FooterStart -->
 ---
