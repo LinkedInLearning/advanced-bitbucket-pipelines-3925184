@@ -71,7 +71,7 @@ If you see the following error in your pipeline:
 
 ![Semversioner Error](./images/6-SCR-20241217-misj.png)
 
-...its becuase a change file with semantic versioning is not in place.
+...its because a change file with semantic versioning is not in place.
 
 TODO: Add more details on semantic versioning
 
@@ -80,5 +80,5 @@ TODO: Add more details on semantic versioning
 
 <!-- FooterStart -->
 ---
-[← pytest cache directory #](../03_03_test_a_custom_pipe/advanced-python/.pytest_cache/README.md) | [Advanced Bitbucket Pipelines: Automating Deployments & Managing Third Party Integrations →](../../README.md)
+[← pytest cache directory #](../03_03_test_a_custom_pipe/advanced-python/.pytest_cache/README.md) | [03_05 Use a custom pipe in a pipeline →](../03_05_use_a_custom_pipe_in_a_pipeline/README.md)
 <!-- FooterEnd -->
