@@ -1,0 +1,32 @@
+image:
+  name: python:3.10
+
+test: &test
+  step:
+    name: Test
+    script:
+      - pip install -r test/requirements.txt
+      - pytest -v test/test.py
+    services:
+      - docker
+
+push: &push
+  step:
+    name: Push and Tag
+    image: python:3.10
+    script:
+      - pipe: atlassian/bitbucket-pipe-release:5.6.0
+        variables:
+          REGISTRY_USERNAME: $REGISTRY_USERNAME
+          REGISTRY_PASSWORD: $REGISTRY_PASSWORD
+          IMAGE: amazing-mobile-app/$BITBUCKET_REPO_SLUG
+    services:
+      - docker
+
+pipelines:
+  default:
+  - <<: *test
+  branches:
+    master:
+    - <<: *test
+    - <<: *push

@@ -1,0 +1,14 @@
+name: JSON Report Generator
+image: amazing-mobile-app/json-report-generator:0.0.0
+description: This pipe will be used to create JSON reports from data files.
+category: Reports
+repository: https://bitbucket.org/amazing-mobile-app-finance-team/json-report-generator
+vendor:
+  name: The Amazing Mobile App, Inc.
+  website: http://example.com/amazing-mobile-app
+maintainer:
+  name: The Amazing Mobile App, Inc.
+  website: http://example.com/amazing-mobile-app
+tags:
+    - deployment
+
