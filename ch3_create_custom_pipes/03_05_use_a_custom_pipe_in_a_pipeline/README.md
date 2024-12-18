@@ -12,5 +12,5 @@ No worries!  Just refresh the browser window and take another look.
 
 <!-- FooterStart -->
 ---
-[← 03_04 Deploy a Custom Pipe to a Container Registry](../03_04_deploy_a_custom_pipe_to_a_container_registry/README.md) | [03_06 Challenge: Develop a custom pipe [text] →](../03_06_challenge_create_a_custom_pipe/README.md)
+[← 03_04 Deploy a Custom Pipe to a Container Registry](../03_04_deploy_a_custom_pipe_to_a_container_registry/README.md) | [03_06 Challenge: Develop a Custom Pipe →](../03_06_challenge_create_a_custom_pipe/README.md)
 <!-- FooterEnd -->

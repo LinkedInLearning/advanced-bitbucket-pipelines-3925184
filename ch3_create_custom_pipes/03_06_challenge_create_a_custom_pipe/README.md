@@ -1,4 +1,4 @@
-# 03_06 Challenge: Develop a custom pipe [text]
+# 03_06 Challenge: Develop a Custom Pipe
 
 ## Challenge Scenario
 
@@ -8,7 +8,7 @@ The initiative is led by the Amazing Library for Phone Hooks and APIs (ALPHA) Te
 
 Before implementing the API interface, the ALPHA team is asking you to a demonstrate how customers can use a pipe to call the ALPHA API. They've asked you to update their code (which was generated using a Python-based Complete Pipe template) to use the `CUSTOMER_ID` parameter instead of the `NAME` parameter.
 
-All the code you need for this challenge can be found in the exercise files.
+All the code you need for this challenge can be found in the exercise files for this lesson in the `./ALPHA-Team-Pipe` directory.
 
 Review the notes in the following sections for the tools and techniques you’ll use to solve this challenge:
 
@@ -59,5 +59,5 @@ This challenge should take 10-15 minutes to complete.
 
 <!-- FooterStart -->
 ---
-[← 03_05 Use a custom pipe in a pipeline](../03_05_use_a_custom_pipe_in_a_pipeline/README.md) | [03_07 Solution: Develop a custom pipe →](../03_07_solution_create_a_custom_pipe/README.md)
+[← 03_05 Use a custom pipe in a pipeline](../03_05_use_a_custom_pipe_in_a_pipeline/README.md) | [pytest cache directory # →](../03_07_solution_create_a_custom_pipe/ALPHA-Team-Pipe-SOLUTION/.pytest_cache/README.md)
 <!-- FooterEnd -->

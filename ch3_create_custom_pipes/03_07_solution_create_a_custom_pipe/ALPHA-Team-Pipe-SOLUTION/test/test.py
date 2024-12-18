@@ -36,11 +36,11 @@ def test_success():
   args = [
     'docker',
     'run',
-    '-e', 'CUSTOMER_ID=1234567890',
+    '-e', 'CUSTOMER_ID=DEC041906',
     docker_image,
   ]
 
   result = subprocess.run(args, check=False, text=True, capture_output=True)
-  assert '1234567890' in result.stdout
+  assert 'DEC041906' in result.stdout
   assert result.returncode == 0
 
