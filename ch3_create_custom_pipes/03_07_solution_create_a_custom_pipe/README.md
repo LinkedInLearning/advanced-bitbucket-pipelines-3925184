@@ -181,5 +181,5 @@ For reference, you can find the code that implements the solution in the exercis
 
 <!-- FooterStart -->
 ---
-[← pytest cache directory #](ALPHA-Team-Pipe-SOLUTION/.pytest_cache/README.md) | [Advanced Bitbucket Pipelines: Automating Deployments & Managing Third Party Integrations →](../../README.md)
+[← pytest cache directory #](ALPHA-Team-Pipe-SOLUTION/.pytest_cache/README.md) | [04_01 When to Use Self-Hosted Runners →](../../ch4_self_hosted_runners/04_01_when_to_use_self_hosted_runners/README.md)
 <!-- FooterEnd -->
