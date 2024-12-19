@@ -1,0 +1,131 @@
+Description: Sets up an environment intended for deploying Bitbucket Runners using an EC2 Server with a balance of compute, memory, and network resources.  No SSH key is required; use the SSM to connect to a terminal on the server.
+
+Resources:
+  Role:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service: [ec2.amazonaws.com]
+            Action: ['sts:AssumeRole']
+      Path: /
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
+        - arn:aws:iam::aws:policy/service-role/AmazonEC2RoleforSSM
+
+
+  Profile:
+    Type: AWS::IAM::InstanceProfile
+    Properties:
+      Path: /
+      Roles: [!Ref Role]
+
+
+  Runner:
+    Type: AWS::EC2::Instance
+
+    CreationPolicy:
+      ResourceSignal:
+        Timeout: PT15M
+
+    Metadata:
+      'AWS::CloudFormation::Init':
+        configSets:
+          application_installation:
+            - install_cfn
+            - install_apps
+        install_cfn:
+          files:
+            /etc/cfn/cfn-hup.conf:
+              content: !Sub |
+                [main]
+                stack=${AWS::StackId}
+                region=${AWS::Region}
+              mode: '000400'
+              owner: root
+              group: root
+
+            /etc/cfn/hooks.d/cfn-auto-reloader.conf:
+              content: !Sub |
+                [cfn-auto-reloader-hook]
+                triggers=post.update
+                path=Resources.Runner.Metadata.AWS::CloudFormation::Init
+                action=/opt/aws/bin/cfn-init -v
+                      --stack ${AWS::StackName}
+                      --resource Runner
+                      --configsets application_installation
+                      --region ${AWS::Region}
+              mode: '000400'
+              owner: root
+              group: root
+
+          services:
+            sysvinit:
+              cfn-hup:
+                enabled: 'true'
+                ensureRunning: 'true'
+                files:
+                  - /etc/cfn/cfn-hup.conf
+                  - /etc/cfn/hooks.d/cfn-auto-reloader.conf
+
+        install_apps:
+          packages:
+            yum:
+              docker: []
+              git.x86_64: []
+              java-23-amazon-corretto.x86_64: []
+          services:
+            sysvinit:
+              docker:
+                enabled: 'true'
+                ensureRunning: 'true'
+
+    Properties:
+      InstanceType: m4.large
+
+      ImageId: "{{resolve:ssm:/aws/service/ami-amazon-linux-latest/al2023-ami-kernel-6.1-x86_64}}"
+
+      IamInstanceProfile: !Ref Profile
+
+      Tags:
+        - Key: Name
+          Value: !Sub ${AWS::StackName}
+        - Key: CloudFormation
+          Value: "True"
+
+      BlockDeviceMappings:
+        - DeviceName: /dev/xvda
+          Ebs:
+            VolumeType: gp3
+            VolumeSize: 250
+            DeleteOnTermination: true
+            Encrypted: true
+
+      UserData:
+        Fn::Base64:
+          !Sub |
+            #!/bin/bash -xe
+            exec > >(tee /var/log/user-data.log) 2>&1
+
+            yum update -y aws-cfn-bootstrap
+
+            /opt/aws/bin/cfn-init -v \
+              --stack ${AWS::StackName} \
+              --region ${AWS::Region} \
+              --resource Runner \
+              --configsets application_installation
+
+            docker pull docker-public.packages.atlassian.com/sox/atlassian/bitbucket-pipelines-runner:latest
+
+            /opt/aws/bin/cfn-signal -e $? \
+              --stack ${AWS::StackName} \
+              --region ${AWS::Region} \
+              --resource Runner
+
+
+Outputs:
+  TerminalUrl:
+    Value: !Sub "https://${AWS::Region}.console.aws.amazon.com/ec2/home?region=${AWS::Region}#ConnectToInstance:instanceId=${Runner}"
+    Description: Follow this URL to open a terminal on the server to install runners
