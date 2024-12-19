@@ -2,5 +2,5 @@
 
 <!-- FooterStart -->
 ---
-[← 02_03 Set Up the AWS Environment](../02_03_set_up_the_aws_environment/README.md) | [02_05 Challenge: Use Pipes in a Pipeline →](../02_05_challenge_use_pipes_in_a_pipeline/README.md)
+[← 02_03 Deploy Lambda Functions in AWS](../02_03_deploy_lambda_functions_in_aws/README.md) | [02_05 Challenge: Use Pipes in a Pipeline →](../02_05_challenge_use_pipes_in_a_pipeline/README.md)
 <!-- FooterEnd -->

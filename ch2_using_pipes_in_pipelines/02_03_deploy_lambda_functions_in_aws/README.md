@@ -1,4 +1,4 @@
-# 02_03 Set Up the AWS Environment
+# 02_03 Deploy Lambda Functions in AWS
 
 In this lesson you will use a CloudFormation template to deploy the AWS resources that will be used in the future lessons.
 
