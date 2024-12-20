@@ -93,9 +93,7 @@ TODO: Update images starting here...(upload image)
 
 1. Elevate your session to become the root user by running the following command:
 
-    ```bash
-    sudo su -
-    ```
+        sudo su -
 
     ![Become the root user](./images/10-elevate-session-to-use-root-account.png)
 
