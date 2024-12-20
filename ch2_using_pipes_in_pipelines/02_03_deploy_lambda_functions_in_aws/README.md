@@ -1,6 +1,6 @@
 # 02_03 Deploy Lambda Functions in AWS
 
-In this lesson you will use a CloudFormation template to deploy the AWS resources that will be used in the future lessons.
+In this lab you will use a CloudFormation template to deploy the AWS resources that will be used in the future lessons.
 
 ![resource diagram](./images/00-resource-diagram.png)
 

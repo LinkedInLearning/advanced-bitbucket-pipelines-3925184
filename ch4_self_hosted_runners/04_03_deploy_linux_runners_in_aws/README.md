@@ -1,6 +1,6 @@
 # 04_03 Deploy Linux runners in AWS
 
-In this lesson you will use a CloudFormation template to deploy the AWS resources that will be used to create self-hosted runners.
+In this lab you will use a CloudFormation template to deploy the AWS resources that will be used to create self-hosted runners.
 
 ![resource diagram](./images/00-resource-diagram.png)
 
@@ -10,11 +10,28 @@ TODO: add links to the resources in the following table:
 
 | Requirement             | Configuration                          |
 |-------------------------|----------------------------------------|
-| 64 Bit Operating System | [Amazon Linux 2023](https://aws.amazon.com/linux/amazon-linux-2023/) TODO: Add version |
-| 8 GB RAM                | Instance type is [`m6i.large`](https://aws.amazon.com/ec2/instance-types/m6i/)            |
-| OpenJDK                 | [Amazon Corretto](https://aws.amazon.com/corretto/) version TODO: Add version|
-| Git                     | Git TODO: Add version                   |
-| Docker                  | Docker TODO: Add version                |
+| 64 Bit Operating System | [Amazon Linux 2023](https://aws.amazon.com/linux/amazon-linux-2023/) ([version 2.40.1](https://docs.aws.amazon.com/linux/al2023/release-notes/relnotes-2023.6.20241212.html)) |
+| 8 GB RAM | Instance type is [`m6i.large`](https://aws.amazon.com/ec2/instance-types/m6i/) |
+| OpenJDK | [Amazon Corretto](https://aws.amazon.com/corretto/)-23.0.1.8.1 (build 23.0.1+8-FR) |
+| [Git](https://git-scm.com/) | version 2.40.1 |
+| [Docker](https://www.docker.com/products/cli/) | version 25.0.5, build 5dc9bcc |
+
+## Determine EC2 Instance Hourly Pricing
+
+Please note that the resources created in this lab will cause a cost to be incurred.
+
+To determine the hourly cost for the resources created by this lab, open the following link and complete the steps below:
+
+- [Amazon EC2 On-Demand Pricing](https://aws.amazon.com/ec2/pricing/on-demand/)
+
+| **#** | **Option**       | **Selection**                                    |
+|-------|------------------|--------------------------------------------------|
+| **1** | Location Type    | `AWS Region`                                     |
+| **2** | Region           | Select the region you plan to use for deployment |
+| **3** | Operating system | `Linux`                                          |
+| **4** | Instance type    | `m6i.large`                                      |
+
+![On-Demand Pricing for Amazon EC2, m6i.large](./images/00-ec2-instance-pricing.png)
 
 ## Prerequisites
 
@@ -66,7 +83,7 @@ TODO: Update images starting here...(upload image)
 
 1. After the creation is complete, select the **Outputs** tab to see the values for:
 
-    - **TerminalURL**: Follow this URL to open a terminal on the server to install runners
+    - **TerminalURL**: Follow this URL to open a terminal on the server to install runners.
 
     ![Outputs TerminalURL](./images/08-outputs.png)
 
