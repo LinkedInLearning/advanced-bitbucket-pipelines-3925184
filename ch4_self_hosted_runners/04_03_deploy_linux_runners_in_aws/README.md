@@ -84,7 +84,7 @@ TODO: Update images starting here...(upload image)
 
 ## Proceed to the Next Lesson
 
-With the EC2 instance in place, you're all set to set up **Linux Docker** and **Linux Shell** runners!
+With the EC2 instance in place, you're ready to set up **Linux Docker** and **Linux Shell** runners!
 
 <!-- FooterStart -->
 ---
