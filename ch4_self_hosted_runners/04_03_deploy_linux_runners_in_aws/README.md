@@ -1,6 +1,6 @@
 # 04_03 Deploy Linux runners in AWS
 
-In this lesson you will use a CloudFormation template to deploy the AWS resources that will be used in the future lessons.
+In this lesson you will use a CloudFormation template to deploy the AWS resources that will be used to create self-hosted runners.
 
 ![resource diagram](./images/00-resource-diagram.png)
 
@@ -10,9 +10,9 @@ TODO: add links to the resources in the following table:
 
 | Requirement             | Configuration                          |
 |-------------------------|----------------------------------------|
-| 64 Bit Operating System | Amazon Linux 2023 TODO: Add version |
-| 8 GB RAM                | Instance type is `m4.large`            |
-| OpenJDK                 | Amazon Corretto version TODO: Add version|
+| 64 Bit Operating System | [Amazon Linux 2023](https://aws.amazon.com/linux/amazon-linux-2023/) TODO: Add version |
+| 8 GB RAM                | Instance type is [`m6i.large`](https://aws.amazon.com/ec2/instance-types/m6i/)            |
+| OpenJDK                 | [Amazon Corretto](https://aws.amazon.com/corretto/) version TODO: Add version|
 | Git                     | Git TODO: Add version                   |
 | Docker                  | Docker TODO: Add version                |
 

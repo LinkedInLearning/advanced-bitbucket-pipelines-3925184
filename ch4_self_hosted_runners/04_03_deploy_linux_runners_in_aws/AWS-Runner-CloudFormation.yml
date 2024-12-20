@@ -1,4 +1,4 @@
-Description: Sets up an environment intended for deploying Bitbucket Runners using an EC2 Server with a balance of compute, memory, and network resources.  No SSH key is required; use the SSM to connect to a terminal on the server.
+Description: Sets up an environment intended for deploying Bitbucket Runners using an EC2 Server with a balance of compute, memory, and network resources.  No SSH key is required; Select the Outputs tab and use the TerminalUrl to connect to the server via Session Manager.
 
 Resources:
   Role:
@@ -83,7 +83,7 @@ Resources:
                 ensureRunning: 'true'
 
     Properties:
-      InstanceType: m4.large
+      InstanceType: m6i.large
 
       ImageId: "{{resolve:ssm:/aws/service/ami-amazon-linux-latest/al2023-ami-kernel-6.1-x86_64}}"
 
@@ -128,4 +128,4 @@ Resources:
 Outputs:
   TerminalUrl:
     Value: !Sub "https://${AWS::Region}.console.aws.amazon.com/ec2/home?region=${AWS::Region}#ConnectToInstance:instanceId=${Runner}"
-    Description: Follow this URL to open a terminal on the server to install runners
+    Description: Follow this URL to open a terminal on the server to install runners.
