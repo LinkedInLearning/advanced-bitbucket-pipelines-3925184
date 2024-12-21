@@ -1,0 +1,174 @@
+Description: Sets up an environment intended for deploying Bitbucket Runners
+  using an EC2 Server with a balance of compute, memory, and network resources.
+  No SSH key is required; Select the Outputs tab and use the TerminalUrl to
+  connect to the server via Session Manager.
+
+Resources:
+  Role:
+    Type: AWS::IAM::Role
+    Properties:
+      AssumeRolePolicyDocument:
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - ec2.amazonaws.com
+            Action:
+              - sts:AssumeRole
+      Path: /
+      ManagedPolicyArns:
+        - arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore
+        - arn:aws:iam::aws:policy/service-role/AmazonEC2RoleforSSM
+      Policies:
+        - PolicyName: ReadParameterPolicy
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action:
+                  - ssm:GetParameter
+                Resource: !Sub arn:aws:ssm:${AWS::Region}:${AWS::AccountId}:parameter/DATA_FILE
+
+  Profile:
+    Type: AWS::IAM::InstanceProfile
+    Properties:
+      Path: /
+      Roles:
+        - !Ref Role
+
+  Runner:
+    Type: AWS::EC2::Instance
+
+    CreationPolicy:
+      ResourceSignal:
+        Timeout: PT15M
+
+    Metadata:
+      AWS::CloudFormation::Init:
+        configSets:
+          application_installation:
+            - install_cfn
+            - install_apps
+        install_cfn:
+          files:
+            /opt/data_file.txt:
+              content: |
+
+                THIS IS THE ON PREMISES DATA! :D
+
+                You've successfully completed the challenge and
+                demonstrated your ability to set up and use a
+                self-hosted runner in Bitbucket Pipelines.
+
+                Your skills in configuring AWS resources, scripting
+                automation tasks, and optimizing CI/CD workflows
+                are impressive!
+
+                Keep learning and exploring Bitbucket Pipelines.
+
+                You're building expertise that will make a real
+                difference in your career.
+
+            /etc/cfn/cfn-hup.conf:
+              content: !Sub |
+                [main]
+                stack=${AWS::StackId}
+                region=${AWS::Region}
+              mode: '000400'
+              owner: root
+              group: root
+
+            /etc/cfn/hooks.d/cfn-auto-reloader.conf:
+              content: !Sub |
+                [cfn-auto-reloader-hook]
+                triggers=post.update
+                path=Resources.Runner.Metadata.AWS::CloudFormation::Init
+                action=/opt/aws/bin/cfn-init -v
+                      --stack ${AWS::StackName}
+                      --resource Runner
+                      --configsets application_installation
+                      --region ${AWS::Region}
+              mode: '000400'
+              owner: root
+              group: root
+
+          services:
+            sysvinit:
+              cfn-hup:
+                enabled: 'true'
+                ensureRunning: 'true'
+                files:
+                  - /etc/cfn/cfn-hup.conf
+                  - /etc/cfn/hooks.d/cfn-auto-reloader.conf
+
+        install_apps:
+          packages:
+            yum:
+              docker: []
+              git.x86_64: []
+              java-23-amazon-corretto-headless.x86_64: []
+              python3-pip: []
+          services:
+            sysvinit:
+              docker:
+                enabled: 'true'
+                ensureRunning: 'true'
+
+    Properties:
+      InstanceType: m6i.large
+
+      ImageId: '{{resolve:ssm:/aws/service/ami-amazon-linux-latest/al2023-ami-kernel-6.1-x86_64}}'
+
+      IamInstanceProfile: !Ref Profile
+
+      Tags:
+        - Key: Name
+          Value: !Sub ${AWS::StackName}
+        - Key: CloudFormation
+          Value: 'True'
+
+      BlockDeviceMappings:
+        - DeviceName: /dev/xvda
+          Ebs:
+            VolumeType: gp3
+            VolumeSize: 250
+            DeleteOnTermination: true
+            Encrypted: true
+
+      UserData: !Base64
+        Fn::Sub: |
+          #!/bin/bash -xe
+          exec > >(tee /var/log/user-data.log) 2>&1
+          yum update -y aws-cfn-bootstrap
+          /opt/aws/bin/cfn-init -v \
+            --stack ${AWS::StackName} \
+            --region ${AWS::Region} \
+            --resource Runner \
+            --configsets application_installation
+          docker pull docker-public.packages.atlassian.com/sox/atlassian/bitbucket-pipelines-runner:latest
+          /opt/aws/bin/cfn-signal -e $? \
+            --stack ${AWS::StackName} \
+            --region ${AWS::Region} \
+            --resource Runner
+
+  DataFileParameter:
+    Type: AWS::SSM::Parameter
+    Properties:
+      Name: DATA_FILE
+      Type: String
+      Value: /opt/data_file.txt
+      Description: Path to the data file on the EC2 instance
+      Tier: Standard
+
+Outputs:
+  DataFileParameterName:
+    Description: The name of the parameter in SSM
+    Value: !Ref DataFileParameter
+
+  AwsRegion:
+    Description: The region where this stack was deployed.  Use this value for the AWS_REGION repository variable
+    Value: !Sub ${AWS::Region}
+
+  TerminalUrl:
+    Value: !Sub https://${AWS::Region}.console.aws.amazon.com/ec2/home?region=${AWS::Region}#ConnectToInstance:instanceId=${Runner}
+    Description: Follow this URL to open a terminal on the server to install runners.
