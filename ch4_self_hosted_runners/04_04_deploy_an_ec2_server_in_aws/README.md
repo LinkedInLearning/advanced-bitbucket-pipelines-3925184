@@ -1,4 +1,4 @@
-# 04_03 Deploy Linux runners in AWS
+# 04_03 Deploy an EC2 Server in AWS
 
 In this lab you will use a CloudFormation template to deploy the AWS resources that will be used to create self-hosted runners.
 
@@ -6,15 +6,13 @@ In this lab you will use a CloudFormation template to deploy the AWS resources t
 
 The template deploys an EC2 instance that meets all the requirements for deploying **Linux Docker** and **Linux Shell** runners including:
 
-TODO: add links to the resources in the following table:
-
 | Requirement             | Configuration                          |
 |-------------------------|----------------------------------------|
 | 64 Bit Operating System | [Amazon Linux 2023](https://aws.amazon.com/linux/amazon-linux-2023/) ([version 2.40.1](https://docs.aws.amazon.com/linux/al2023/release-notes/relnotes-2023.6.20241212.html)) |
 | 8 GB RAM | Instance type is [`m6i.large`](https://aws.amazon.com/ec2/instance-types/m6i/) |
 | OpenJDK | [Amazon Corretto](https://aws.amazon.com/corretto/)-23.0.1.8.1 (build 23.0.1+8-FR) |
-| [Git](https://git-scm.com/) | version 2.40.1 |
-| [Docker](https://www.docker.com/products/cli/) | version 25.0.5, build 5dc9bcc |
+| Git | [Git version 2.40.1](https://git-scm.com/) |
+| Docker |  [Docker version 25.0.5, build 5dc9bcc](https://www.docker.com/products/cli/) |
 
 ## Determine EC2 Instance Hourly Pricing
 
@@ -103,5 +101,5 @@ With the EC2 instance in place, you're ready to set up **Linux Docker** and **Li
 
 <!-- FooterStart -->
 ---
-[← 04_02 Self-Hosted Runner Configurations](../04_02_self_hosted_runner_configurations/README.md) | [04_04 Installing Runners →](../04_04_installing_runners/README.md)
+[← 04_03 Compare Repository and Workspace Runners](../04_03_compare_repository_and_workspace_runners/README.md) | [04_05 Install Runners in a Workspace →](../04_05_install_runners_in_a_workspace/README.md)
 <!-- FooterEnd -->

@@ -2,5 +2,5 @@
 
 <!-- FooterStart -->
 ---
-[← 04_05 Install a Workspace Runner](../04_05_install_a_workspace_runner/README.md) | [04_07 Challenge: Deploy a Self-Hosted Runner →](../04_07_challenge_deploy_a_self_hosted_runner/README.md)
+[← 04_05 Install Runners in a Workspace](../04_05_install_runners_in_a_workspace/README.md) | [04_07 Challenge: Deploy a Self-Hosted Runner →](../04_07_challenge_deploy_a_self_hosted_runner/README.md)
 <!-- FooterEnd -->
