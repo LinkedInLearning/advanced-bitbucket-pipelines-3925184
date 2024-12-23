@@ -76,6 +76,8 @@ Resources:
               docker: []
               git.x86_64: []
               java-23-amazon-corretto-headless.x86_64: []
+              python3-pip: []
+
           services:
             sysvinit:
               docker:
