@@ -27,9 +27,11 @@ Complete the following steps to solve this challenge:
     - What type of runner should you deploy; **Linux Shell** or **Linux Docker**?
     - Why is the runner you chose the right choice for your solution?
 
-1. Create a repository and add the exercise files.  This includes:
+1. Create a new repository and add the exercise files.  This includes:
+
     1. A script that will read a Parameter Store location and then read a data file.
     1. A pipeline configuration that schedules a step to run on a self-hosted runner and then runs the script.
+
 1. Confirm that the provided script and pipeline configuration complete the goals for the proof of concept.
 
 This challenge should take 20-25 minutes to complete.
