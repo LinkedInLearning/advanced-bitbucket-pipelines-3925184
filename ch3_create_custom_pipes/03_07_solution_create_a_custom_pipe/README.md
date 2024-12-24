@@ -176,7 +176,6 @@ For reference, you can find the code that implements the solution in the exercis
 
 ## Reference Code
 
-
 [^1]: Maybe its just me but I like to run the test suite again after making changes like this to eliminate any false sense of security.  If I make changes and the test suite passes, is the test suite really working?  In this case I would expect both tests to fail after the code was updated.
 
 <!-- FooterStart -->

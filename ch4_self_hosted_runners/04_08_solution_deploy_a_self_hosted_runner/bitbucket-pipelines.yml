@@ -1,0 +1,29 @@
+image: atlassian/default-image:4
+
+pipelines:
+  default:
+    - step:
+        name: Install Dependencies
+        runs-on:
+          - self.hosted
+          - linux.shell
+        caches:
+          - pip
+        script:
+          - /usr/bin/pip install --requirement requirements.txt
+    - step:
+        name: Get Runner Details
+        runs-on:
+          - self.hosted
+          - linux.shell
+        script:
+          - /usr/bin/python3 get-runner-details.py | tee runner-details.log
+    - step:
+        name: Read Data File
+        runs-on:
+          - self.hosted
+          - linux.shell
+        script:
+          - /usr/bin/python3 read-data-file.py | tee data-file.log
+        artifacts:
+          - '*.log'
