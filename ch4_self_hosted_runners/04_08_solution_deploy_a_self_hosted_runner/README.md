@@ -22,9 +22,10 @@ Complete the following steps to solve this challenge:
     1. An IAM policy and role that allow an EC2 instance to read the parameter
     1. An EC2 instance that assumes the role and can be used as a self-hosted runner
 
-1. Deploy a runner on the EC2 instance. What type of runner should you deploy?
+1. Deploy a runner on the EC2 instance.
 
-    - **Linux Shell** or **Linux Docker**?
+    - What type of runner should you deploy; **Linux Shell** or **Linux Docker**?
+    - Why is the runner you chose the right choice for your solution?
 
 1. Create a repository and add the exercise files.  This includes:
     1. A script that will read a Parameter Store location and then read a data file.
