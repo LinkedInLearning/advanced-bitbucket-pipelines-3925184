@@ -1,0 +1,28 @@
+definitions:
+  script: &inspect-runner-environment
+    - echo "Gathering CPU Info..." && lscpu
+    - echo "Gathering Memory Info..." && free -h
+    - echo "Disk Usage:" && df -h /
+    - echo "Installed Tools:"
+    - java --version || true
+    - git --version  || true
+    - docker --version  || true
+    - echo "Listing All Commands:" && compgen -c
+    - echo "Network Information:" && ip addr show
+    - echo "Environment Variables:" && env
+
+pipelines:
+  default:
+    - step:
+        name: Use Linux Shell Runner
+        runs-on:
+          - self.hosted
+          - linux.shell
+          - os.al2023
+        script: *inspect-runner-environment
+    - step:
+        name: Use Linux Docker Runner
+        runs-on:
+          - self.hosted
+          - linux
+        script: *inspect-runner-environment
