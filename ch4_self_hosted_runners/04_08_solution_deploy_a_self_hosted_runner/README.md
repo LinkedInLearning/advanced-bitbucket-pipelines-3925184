@@ -36,6 +36,8 @@ Complete the following steps to solve this challenge:
 
 This challenge should take 20-25 minutes to complete.
 
+TODO: Add links to the exercise files?
+
 ## Solution
 
 TODO: Add the solution steps here! :D
