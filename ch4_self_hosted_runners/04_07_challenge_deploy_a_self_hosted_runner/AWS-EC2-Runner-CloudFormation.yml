@@ -138,14 +138,19 @@ Resources:
       UserData: !Base64
         Fn::Sub: |
           #!/bin/bash -xe
+
           exec > >(tee /var/log/user-data.log) 2>&1
+
           yum update -y aws-cfn-bootstrap
+
           /opt/aws/bin/cfn-init -v \
             --stack ${AWS::StackName} \
             --region ${AWS::Region} \
             --resource Runner \
             --configsets application_installation
+
           docker pull docker-public.packages.atlassian.com/sox/atlassian/bitbucket-pipelines-runner:latest
+
           /opt/aws/bin/cfn-signal -e $? \
             --stack ${AWS::StackName} \
             --region ${AWS::Region} \
