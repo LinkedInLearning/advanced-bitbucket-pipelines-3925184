@@ -59,5 +59,5 @@ This challenge should take 10-15 minutes to complete.
 
 <!-- FooterStart -->
 ---
-[← 03_05 Use a custom pipe in a pipeline](../03_05_use_a_custom_pipe_in_a_pipeline/README.md) | [pytest cache directory # →](../03_07_solution_create_a_custom_pipe/ALPHA-Team-Pipe-SOLUTION/.pytest_cache/README.md)
+[← 03_05 Use a custom pipe in a pipeline](../03_05_use_a_custom_pipe_in_a_pipeline/README.md) | [03_07 Solution: Develop a custom pipe →](../03_07_solution_create_a_custom_pipe/README.md)
 <!-- FooterEnd -->

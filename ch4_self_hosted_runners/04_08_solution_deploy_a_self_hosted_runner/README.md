@@ -4,7 +4,7 @@
 
 In this challenge you’re continuing your role as the Bitbucket Pipelines expert supporting the Amazing Mobile App.
 
-The Amazing Mobile App’s DevOps team needs to run a deployment script that accesses sensitive data stored in the company's AWS account.  The deployment script needs to access AWS Parameter Store to retreive the path to the file that contains the data.
+The Amazing Mobile App’s DevOps team needs to run a deployment script that accesses sensitive data stored in the company's AWS account.  The deployment script needs to access AWS Parameter Store to retrieve the path to the file that contains the data.
 
 They're concerned about the risk of enabling Bitbucket's runners to have access to private networks and would like to develop a solution that uses their own, self-hosted runners.
 
@@ -18,7 +18,7 @@ Complete the following steps to solve this challenge:
 
     ![AWS Resources](./images/cfn-designer.png)
 
-    1. A paramater store location that contains the path to a data file
+    1. A parameter store location that contains the path to a data file
     1. An IAM policy and role that allow an EC2 instance to read the parameter
     1. An EC2 instance that assumes the role and can be used as a self-hosted runner
 

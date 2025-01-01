@@ -11,7 +11,7 @@ hello:
 	@echo "\tall         - run all tasks (except clean)"
 
 #all: footer lint spellcheck
-all: footer spellcheck
+all: clean footer spellcheck
 	@echo "Done."
 
 lint:
@@ -67,6 +67,7 @@ clean:
 	find . -type f -name \*.pdf -exec rm -vf {} \;
 	find . -type f -name \*.bak -exec rm -vf {} \;
 	find . -type f -name \*.new -exec rm -vf {} \;
+	find . -type d -name .pytest_cache -exec trash {} \;
 
 nuke: clean
 	find /tmp/ -type f -name \*.pdf -exec rm -vf {} \;

@@ -93,5 +93,5 @@ The workaround is to update `.gitignore` to keep *.pyc files out of the repo;
 
 <!-- FooterStart -->
 ---
-[← Bitbucket Pipelines Pipe: example](../03_02_develop_a_custom_pipe/advanced-python/README.md) | [pytest cache directory # →](advanced-python/.pytest_cache/README.md)
+[← Bitbucket Pipelines Pipe: example](../03_02_develop_a_custom_pipe/advanced-python/README.md) | [03_04 Deploy a Custom Pipe to a Container Registry →](../03_04_deploy_a_custom_pipe_to_a_container_registry/README.md)
 <!-- FooterEnd -->

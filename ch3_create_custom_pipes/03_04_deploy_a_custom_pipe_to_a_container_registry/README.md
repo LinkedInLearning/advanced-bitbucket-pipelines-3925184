@@ -73,12 +73,34 @@ If you see the following error in your pipeline:
 
 ...its because a change file with semantic versioning is not in place.
 
-TODO: Add more details on semantic versioning
+Run these commands in the root directory of your repo:
 
-- [Bitbucket pipe release v5.6.1 has a Semversioner error]()https://community.atlassian.com/t5/Bitbucket-questions/Bitbucket-pipe-release-v5-6-1-has-a-Semversioner-error/qaq-p/2677152)
--
+```bash
+pip install semversioner
+semversioner add-change --type minor --description "create pipe"
+```
+
+- [Bitbucket pipe release v5.6.1 has a Semversioner error](https://community.atlassian.com/t5/Bitbucket-questions/Bitbucket-pipe-release-v5-6-1-has-a-Semversioner-error/qaq-p/2677152)
+
+#### What's Semantic Versioning?
+
+Semantic Versioning (SemVer) is a convention for versioning software that uses three numbers separated by dots:
+
+```bash
+MAJOR.MINOR.PATCH
+```
+
+- `MAJOR`: Incremented when backward incompatible changes are made
+- `MINOR`: Incremented when new functionality is added, but backwards compatible
+- `PATCH`: Incremented when bug fixes or minor updates are made
+
+For example: `1.2.3` means:
+
+- `MAJOR`: Version 1 of the software has been released
+- `MINOR`: There have been two minor releases with new features since version 1
+- `PATCH`: There have been three patches (bug fixes) since the last minor release
 
 <!-- FooterStart -->
 ---
-[← pytest cache directory #](../03_03_test_a_custom_pipe/advanced-python/.pytest_cache/README.md) | [03_05 Use a custom pipe in a pipeline →](../03_05_use_a_custom_pipe_in_a_pipeline/README.md)
+[← 03_03 Test a Custom Pipe](../03_03_test_a_custom_pipe/README.md) | [03_05 Use a custom pipe in a pipeline →](../03_05_use_a_custom_pipe_in_a_pipeline/README.md)
 <!-- FooterEnd -->
