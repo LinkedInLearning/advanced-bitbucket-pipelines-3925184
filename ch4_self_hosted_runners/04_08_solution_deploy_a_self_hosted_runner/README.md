@@ -37,6 +37,7 @@ Complete the following steps to solve this challenge:
 This challenge should take 20-25 minutes to complete.
 
 TODO: Add links to the exercise files?
+TODO: Add notes referring to the resources deployed in 04_04; if those resources are already deployed then they don't need to be deployed again.  Only the pipeline needs to be created.
 
 ## Solution
 
