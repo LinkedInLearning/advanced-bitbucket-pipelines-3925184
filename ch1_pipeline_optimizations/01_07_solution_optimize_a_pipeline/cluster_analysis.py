@@ -8,7 +8,7 @@ import json
 import pandas as pd
 import numpy as np
 
-# TODO: These imports need to be added when the analysis code is ready
+# FIXME: These imports need to be added when the analysis code is ready
 # import tensorflow as tf
 # from sklearn.cluster import KMeans
 # from sklearn.metrics import silhouette_score
@@ -21,7 +21,7 @@ def load_dataset(file_path):
     """
     print("Creating or loading dataset...")
 
-    # TODO: Add code to download the dataset from Amazing Mobile App HQ
+    # FIXME: Add code to download the dataset from Amazing Mobile App HQ
     # If not data is in place, generate a random dataset
     if not os.path.exists(file_path):
         os.makedirs(os.path.dirname(file_path), exist_ok=True)
@@ -67,7 +67,7 @@ def generate_report(summary, silhouette_score, output_file):
     report_content = f"""
 # Clustering Analysis Report
 
-- TODO: Add analysis report content here
+- FIXME: Add analysis report content here
 
 ## Silhouette Score
 
@@ -75,7 +75,7 @@ Based on the analysis, the silhouette score is: {silhouette_score}
 
 ## Cluster Summary Statistics
 
-- TODO: Add cluster summary statistics here
+- FIXME: Add cluster summary statistics here
     """
 
     with open(output_file, "w") as f:

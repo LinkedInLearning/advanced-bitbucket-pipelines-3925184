@@ -25,20 +25,20 @@ class TestDatabase < Minitest::Test
     refute_nil connection, "Failed to connect to database"
 
 
-    # TODO: Ruby dev team, can you please fix the following assertions?
-    #       
+    # FIXME: Ruby dev team, can you please fix the following assertions?
+    #
     #       At the moment they are causing errors in the pipeline.
-    #       
+    #
     #       For the Python and Ruby tests to continue together, all tests need
     #       parity in both code bases.
     #
     #       If you need assistance, please reach out to Yukihiro for help.
-    #       
+    #
     #       Until these tests are repaired, keep the following lines
     #       commented out so the pipeline can complete successfully.
     #
     #       Sincerely,
-    #       
+    #
     #       The Amazing Mobile App Python Dev Team
     #
 
