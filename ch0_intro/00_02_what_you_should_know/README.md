@@ -50,6 +50,18 @@ Ask your question there and I’ll do my best to help you out.  If other folks h
 
 Also, please check out the Q&A section to provide answers! As a community, we’ll use the Q&A to collaborate on a positive learning experience for everyone.
 
+## Version Information
+
+This course tracks the versions of software used in demonstrations to ensure a consistent learning experience.
+
+The content of this course is reviewed periodically and updated for compatibility with newer software versions.
+
+If you encounter any version discrepancies, please refer to the course’s Q&A section. Also, check the exercise files for additional information.
+
+This course was created using the following software:
+
+- TODO: Add software versions at the completion of recording (also update the script!)
+
 <!-- FooterStart -->
 ---
 [← 00_01 Introduction](../00_01_introduction/README.md) | [00_03 Using the Exercise Files →](../00_03_using_the_exercise_files/README.md)

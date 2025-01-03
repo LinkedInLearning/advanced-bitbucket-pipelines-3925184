@@ -36,22 +36,22 @@ This challenge should take 10-15 minutes to complete.
 1. When the pipeline completes, observe the **Step time duration**.
 1. View and edit the pipeline configuration. Make the following changes:
 
-  1. Add a `max-time` option:
+    1. Add a `max-time` option:
 
-          options:
-            max-time: 10
+            options:
+              max-time: 10
 
-  1. Add a custom cache definition for the `./data` directory:
+    1. Add a custom cache definition for the `./data` directory:
 
-          definitions:
+            definitions:
+              caches:
+                data: ./data
+
+    1. Update the step to use the custom cache and the pre-defined cache for `pip`.
+
             caches:
-              data: ./data
-
-  1. Update the step to use the custom cache and the pre-defined cache for `pip`.
-
-          caches:
-            - pip
-            - data
+              - pip
+              - data
 
 1. Commit the changes and allow the pipeline to run.  This run should create the caches.
 1. Observe the step time duration and confirm that the caches were created.
@@ -76,7 +76,7 @@ This challenge should take 10-15 minutes to complete.
 1. Change the `max-time` value to 1.  Update the `cluster_analysis.py` script and commit the changes.
 1. Confirm the pipeline terminates if the `max-time` value is exceeded.
 
-The final pipeline configuration should be similar to the following [bitbucket-pipelines.yml](./bitbucket-pipelines.yml) file:
+The final pipeline configuration should be similar to the following: [bitbucket-pipelines.yml](./bitbucket-pipelines.yml) file:
 
 ```yaml
 image: python:3.12

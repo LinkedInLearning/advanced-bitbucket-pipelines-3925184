@@ -76,7 +76,6 @@ Run the pipeline once to make sure pipelines are enabled and working before proc
 
     ![Create Repository Variable](./images/00003_create-repository-variable.png)
 
-
 ### Create the Pipeline Configuration
 
 1. Edit the pipeline configuration.
@@ -103,6 +102,32 @@ Run the pipeline once to make sure pipelines are enabled and working before proc
     ![Download Report](./images/00006_download-report.png)
 
 The completed pipeline should be similar to the following: [bitbucket-pipelines.yml](./bitbucket-pipelines.yml)
+
+```yaml
+image: atlassian/default-image:4
+
+pipelines:
+  default:
+    - step:
+        name: Collect Bitbucket Build Statistics
+        caches:
+          - docker
+        artifacts:
+          - "*.txt"
+        script:
+
+          - export FILENAME="builds-statistics-$(date +%Y-%m-%d).txt"
+
+          - pipe: atlassian/bitbucket-build-statistics:1.5.3
+            variables:
+              BITBUCKET_ACCESS_TOKEN: $STATISTICS_ACCESS_TOKEN
+              FILENAME: "$FILENAME"
+
+          - pipe: atlassian/bitbucket-upload-file:0.7.1
+            variables:
+              BITBUCKET_ACCESS_TOKEN: $STATISTICS_ACCESS_TOKEN
+              FILENAME: "*.txt"
+```
 
 <!-- FooterStart -->
 ---
