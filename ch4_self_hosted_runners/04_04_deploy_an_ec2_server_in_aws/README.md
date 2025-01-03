@@ -1,4 +1,4 @@
-# 04_03 Deploy an EC2 Server in AWS
+# 04_04 Deploy an EC2 Server in AWS
 
 In this lab you will use a CloudFormation template to deploy the AWS resources that will be used to create self-hosted runners.
 
@@ -52,8 +52,6 @@ Having the following items in place before starting this lab will help you have 
     Select the file [AWS-Lambda-CloudFormation.yml](./AWS-Runner-CloudFormation.yml).
 
     Select **Next**.
-
-TODO: Update images starting here...(upload image)
 
     ![upload template](./images/02-upload-template.png)
 
