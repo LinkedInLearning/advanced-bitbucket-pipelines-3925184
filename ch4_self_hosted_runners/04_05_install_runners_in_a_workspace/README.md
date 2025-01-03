@@ -4,5 +4,5 @@
 
 <!-- FooterStart -->
 ---
-[← 04_03 Deploy an EC2 Server in AWS](../04_04_deploy_an_ec2_server_in_aws/README.md) | [04_06 Use Self-Hosted Runners in a Pipeline →](../04_06_use_self_hosted_runners_in_a_pipeline/README.md)
+[← 04_04 Deploy an EC2 Server in AWS](../04_04_deploy_an_ec2_server_in_aws/README.md) | [04_06 Use Self-Hosted Runners in a Pipeline →](../04_06_use_self_hosted_runners_in_a_pipeline/README.md)
 <!-- FooterEnd -->
