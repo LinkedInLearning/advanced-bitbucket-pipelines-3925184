@@ -58,6 +58,9 @@ This challenge should take 10-15 minutes to complete.
 1. Select **Rerun** to run the pipeline again.
 1. Observe the step time duration and confirm that the caches were downloaded.
 1. Confirm that the installation used the cached content instead of downloading.
+
+    1. In the pipeline log select **Build teardown**
+
 1. Confirm that the script used the local data instead of generating it.
 1. View and edit the pipeline configuration. Make the following changes:
 

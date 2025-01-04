@@ -85,7 +85,7 @@ Based on the analysis, the silhouette score is: {silhouette_score}
 
 # Main Script Execution
 if __name__ == "__main__":
-    dataset_path = "./data/dataset.json"
+    dataset_path = "./dataset.json"
     report_path = "./analysis_report.md"
 
     # Create or load dataset
