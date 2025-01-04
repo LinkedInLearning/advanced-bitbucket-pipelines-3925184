@@ -10,7 +10,7 @@ pipelines:
         caches:
           - pip
         script:
-          - /usr/bin/pip install --requirement requirements.txt
+          - /usr/bin/pip3 install --requirement requirements.txt
     - step:
         name: Get Runner Details
         runs-on:
