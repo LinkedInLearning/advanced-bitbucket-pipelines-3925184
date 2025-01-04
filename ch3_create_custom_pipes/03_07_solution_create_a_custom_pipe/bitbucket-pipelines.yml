@@ -26,7 +26,3 @@ push: &push
 pipelines:
   default:
   - <<: *test
-  branches:
-    master:
-    - <<: *test
-    - <<: *push
