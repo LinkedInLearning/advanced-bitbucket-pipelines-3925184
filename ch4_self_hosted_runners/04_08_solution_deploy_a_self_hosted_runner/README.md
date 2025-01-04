@@ -14,9 +14,13 @@ Before building out their solution, they've asked you to develop a proof of conc
 
 Complete the following steps to solve this challenge:
 
-1. Use the exercise files to deploy resources that model the needs of the DevOps team.  This includes:
+1. Use the exercise files to deploy resources that model the needs of the DevOps team.
+
+    **NOTE: If you are following along with the course and have deployed the resources described in [04_04 Deploy an EC2 Server in AWS](../04_04_deploy_an_ec2_server_in_aws/README.md), then you can skip this step.  Those resources can be reused for this challenge.**
 
     ![AWS Resources](./images/cfn-designer.png)
+
+    The resources include:
 
     1. A parameter store location that contains the path to a data file
     1. An IAM policy and role that allow an EC2 instance to read the parameter
@@ -31,14 +35,11 @@ Complete the following steps to solve this challenge:
 
     1. A script that will read a Parameter Store location and then read a data file.
     1. A pipeline configuration that schedules a step to run on a self-hosted runner and then runs the script.
-    1. TODO: Repo variables for credentials
+    1. A repository variable that contains the region where the runner was deployed.
 
-1. Confirm that the provided script and pipeline configuration complete the goals for the proof of concept.
+1. Confirm that the runner you deployed and the reposiroty configuration validate the proof of concept.
 
-This challenge should take 20-25 minutes to complete.
-
-TODO: Add links to the exercise files?
-TODO: Add notes referring to the resources deployed in 04_04; if those resources are already deployed then they don't need to be deployed again.  Only the pipeline needs to be created.
+This challenge should take 25-30 minutes to complete.
 
 ## Solution
 

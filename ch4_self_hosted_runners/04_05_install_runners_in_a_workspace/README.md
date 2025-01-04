@@ -1,5 +1,7 @@
 # 04_05 Install Runners in a Workspace
 
+TODO: Add steps for installing the runners
+
 - [Adding a new runner in Bitbucket](https://support.atlassian.com/bitbucket-cloud/docs/adding-a-new-runner-in-bitbucket/)
 
 <!-- FooterStart -->
