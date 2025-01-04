@@ -6,7 +6,7 @@ test: &test
     name: Test
     script:
       - pip install -r test/requirements.txt
-      - pytest -v test/test.py
+      - pytest --verbose test/test*.py --junitxml=test-reports/report.xml
     services:
       - docker
 

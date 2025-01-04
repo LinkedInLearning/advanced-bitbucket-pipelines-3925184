@@ -61,8 +61,8 @@ This challenge should take 10-15 minutes to complete.
 
 For reference, you can find the code that implements the solution in the exercise files for this lesson.
 
-- [pipe/pipe.py](./ALPHA-Team-Pipe-SOLUTION/pipe/pipe.py)
-- [test/test.py](./ALPHA-Team-Pipe-SOLUTION/test/test.py)
+- [pipe/pipe.py](./pipe/pipe.py)
+- [test/test.py](./test/test.py)
 
 1. **Run the Test Suite**:
 
