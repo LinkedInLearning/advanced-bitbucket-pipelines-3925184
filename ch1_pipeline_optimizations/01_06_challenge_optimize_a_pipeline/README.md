@@ -21,7 +21,13 @@ Review the current pipeline configuration and make changes to optimize the pipel
 
 1. Log into Bitbucket and create a new repository.
 1. Add the exercise files.
-1. Run the pipeline to get an idea of the pipeline performance before making any changes.
+1. From the **Pipelines** menu, run the pipeline once to enable pipline settings.
+
+    ![Run initial pipeline, step 1](./images/SCR-20250103-trnw-run-initial-pipeline-1.png)
+
+    ![Run initial pipeline, step 1](./images/SCR-20250103-trwv-run-initial-pipeline-2.png)
+
+1. Review the pipeline to get an idea of the pipeline performance before making any changes.
 1. Update the [pipeline configuration](./bitbucket-pipelines.yml) to meet the specifications provided by the Data Analysis team.
 
 > [!NOTE]
