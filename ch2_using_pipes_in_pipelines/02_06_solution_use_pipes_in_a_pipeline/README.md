@@ -11,7 +11,7 @@ Use your knowledge of Bitbucket Pipelines to automate a solution for the CFO.
 ## Challenge Tasks
 
 1. Log into Bitbucket and create a new repository.
-1. From the **Pipelines** menu, run the pipeline once to enable pipline settings.
+1. From the **Pipelines** menu, run the pipeline once to enable pipeline settings.
 
     ![Run initial pipeline, step 1](./images/SCR-20250103-trnw-run-initial-pipeline-1.png)
 
