@@ -4,7 +4,7 @@
 
 In this challenge you’re the Bitbucket Pipelines expert supporting development on the Amazing Mobile App.
 
-The Data Analysis team has developed a Python script to run a cluster analysis. This script processes a large dataset stored in a JSON file and generates an analysis report.
+The Data Analysis team has developed a Python script to run a cluster analysis using machine learning. This script processes a large dataset stored in a JSON file and generates an analysis report.
 
 The Data Analysis team is facing challenges with execution time and resource usage, and they’ve asked you to optimize their **Bitbucket Pipelines** workflow.
 
