@@ -58,9 +58,6 @@ This challenge should take 10-15 minutes to complete.
 1. Select **Rerun** to run the pipeline again.
 1. Observe the step time duration and confirm that the caches were downloaded.
 1. Confirm that the installation used the cached content instead of downloading.
-
-    1. In the pipeline log select **Build teardown**
-
 1. Confirm that the script used the local data instead of generating it.
 1. View and edit the pipeline configuration. Make the following changes:
 
@@ -117,3 +114,4 @@ pipelines:
 ---
 [← 01_06 Challenge: Optimize a Workflow in Bitbucket Pipelines](../01_06_challenge_optimize_a_pipeline/README.md) | [02_01 Getting to Know Pipes →](../../ch2_using_pipes_in_pipelines/02_01_getting_to_know_pipes/README.md)
 <!-- FooterEnd -->
+
