@@ -11,6 +11,7 @@ Use your knowledge of Bitbucket Pipelines to automate a solution for the CFO.
 ## Challenge Tasks
 
 1. Log into Bitbucket and create a new repository.
+1. Run the pipeline once to enable pipline settings.
 1. Create a repository access token that you can use to collect the desired information.  The token must have the following permissions:
 
     - `Repositories:Write`
@@ -29,18 +30,18 @@ Use your knowledge of Bitbucket Pipelines to automate a solution for the CFO.
 
         ```yaml
         - pipe: atlassian/bitbucket-build-statistics:1.5.3
-        variables:
-          BITBUCKET_ACCESS_TOKEN: $STATISTICS_ACCESS_TOKEN
-          FILENAME: "$FILENAME"
+          variables:
+            BITBUCKET_ACCESS_TOKEN: $STATISTICS_ACCESS_TOKEN
+            FILENAME: "$FILENAME"
         ```
 
     - [atlassian/bitbucket-upload-file](https://bitbucket.org/atlassian/bitbucket-upload-file/src/master/)
 
         ```yaml
-          - pipe: atlassian/bitbucket-upload-file:0.7.1
-            variables:
-              BITBUCKET_ACCESS_TOKEN: $STATISTICS_ACCESS_TOKEN
-              FILENAME: "*.txt"
+        - pipe: atlassian/bitbucket-upload-file:0.7.4
+          variables:
+            BITBUCKET_ACCESS_TOKEN: $STATISTICS_ACCESS_TOKEN
+            FILENAME: "*.txt"
         ```
 
 This challenge should take 10-15 minutes to complete.
@@ -53,6 +54,8 @@ Run the pipeline once to make sure pipelines are enabled and working before proc
 
 ### Create an Access Token
 
+1. Create a new repo and add the exercise files
+1. Adding the files may not trigger the pipeline right away.  Go to the **Pipelines** menu and select **Run initial pipeline**.
 1. Select **Repository settings** -> **Access tokens** -> **Create Repository Access Token**.
 
     ![Create Access Token](./images/00000_create-access-token-0.png)
@@ -123,7 +126,7 @@ pipelines:
               BITBUCKET_ACCESS_TOKEN: $STATISTICS_ACCESS_TOKEN
               FILENAME: "$FILENAME"
 
-          - pipe: atlassian/bitbucket-upload-file:0.7.1
+          - pipe: atlassian/bitbucket-upload-file:0.7.4
             variables:
               BITBUCKET_ACCESS_TOKEN: $STATISTICS_ACCESS_TOKEN
               FILENAME: "*.txt"
