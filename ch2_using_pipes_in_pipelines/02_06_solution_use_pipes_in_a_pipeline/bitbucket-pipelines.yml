@@ -20,4 +20,4 @@ pipelines:
           - pipe: atlassian/bitbucket-upload-file:0.7.4
             variables:
               BITBUCKET_ACCESS_TOKEN: $STATISTICS_ACCESS_TOKEN
-              FILENAME: "*.txt"
+              FILENAME: "$FILENAME"

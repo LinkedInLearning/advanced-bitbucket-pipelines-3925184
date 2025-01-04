@@ -38,7 +38,7 @@ Use your knowledge of Bitbucket Pipelines to automate a solution for the CFO.
         ```yaml
         - pipe: atlassian/bitbucket-build-statistics:1.5.3
           variables:
-            BITBUCKET_ACCESS_TOKEN: $STATISTICS_ACCESS_TOKEN
+            BITBUCKET_ACCESS_TOKEN: "$STATISTICS_ACCESS_TOKEN"
             FILENAME: "$FILENAME"
         ```
 
@@ -47,8 +47,8 @@ Use your knowledge of Bitbucket Pipelines to automate a solution for the CFO.
         ```yaml
         - pipe: atlassian/bitbucket-upload-file:0.7.4
           variables:
-            BITBUCKET_ACCESS_TOKEN: $STATISTICS_ACCESS_TOKEN
-            FILENAME: "*.txt"
+            BITBUCKET_ACCESS_TOKEN: "$STATISTICS_ACCESS_TOKEN"
+            FILENAME: "$FILENAME"
         ```
 
 This challenge should take 10-15 minutes to complete.
