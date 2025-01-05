@@ -8,7 +8,7 @@ The initiative is led by the Amazing Library for Phone Hooks and APIs (ALPHA) Te
 
 Before implementing the API interface, the ALPHA team is asking you to a demonstrate how customers can use a pipe to call the ALPHA API. They've asked you to update their code (which was generated using a Python-based Complete Pipe template) to use the `CUSTOMER_ID` parameter instead of the `NAME` parameter.
 
-All the code you need for this challenge can be found in the exercise files for this lesson in the `./ALPHA-Team-Pipe` directory.
+All the code you need for this challenge can be found in the exercise files directory for this lesson.
 
 Review the notes in the following sections for the tools and techniques you’ll use to solve this challenge:
 

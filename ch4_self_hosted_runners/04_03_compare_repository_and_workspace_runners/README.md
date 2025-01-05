@@ -1,6 +1,10 @@
 # 04_03 Compare Repository and Workspace Runners
 
-TODO: add the comparison of repository and workspace runners.
+| Repository Runners                   | Workspace Runners |
+|--------------------------------------|-------------------|
+| Runner access is limited to the repo | Runner is available to all repos in the workspace |
+| Linux Shell, Windows, and macOS Runners | Linux Docker |
+| Tools, dependencies, and hardware are consistent | Creates clean environments on each run |
 
 <!-- FooterStart -->
 ---
