@@ -28,6 +28,8 @@ Complete the following steps to solve this challenge:
 
 1. Deploy a runner on the EC2 instance using the runner type that is most applicable to the needs of the DevOps team.
 
+    **NOTE: If you are following along with the course and have deployed the resources described in [04_05 Install Runners in a Workspace](../04_05_install_runners_in_a_workspace/), then you can skip this step.  Those runners can be reused for this challenge.**
+
     - What type of runner should you deploy; **Linux Shell** or **Linux Docker**?
     - Why is the runner you selected the right choice for your solution?
 
@@ -43,7 +45,29 @@ This challenge should take 25-30 minutes to complete.
 
 ## Solution
 
-TODO: Add the solution steps here! :D
+1. **Deploy an EC2 Server**.
+
+    - Follow the steps in [04_04 Deploy an EC2 Server in AWS](../04_04_deploy_an_ec2_server_in_aws/README.md) to deploy a server where runners can be installed.
+
+1. **Install a Linux Shell runner**.
+
+    - Follow the steps in [04_05 Install Runners in a Workspace](../04_05_install_runners_in_a_workspace/) to install a Linux Shell runner.
+
+1. **Create a new repo and add the exercise files**.
+
+    - The exercise files include all the code needed for this challenge.
+
+1. **Create a repository variable for AWS_REGION**
+
+    - _Note: You will need to enable Bitbucket Pipelines or run an initial pipeline before creating repository variables._
+    - View the **Outputs** tab of the CloudFormation stack.  Make a note of the value for `AwsRegion`.
+    - In the repository settings, create an unsecured variable named `AWS_REGION`.  Add the value from the CloudFormation stack.
+
+1. **Run the pipeline and view the output**.
+
+    - Run the pipeline.
+    - Confirm that the pipeline connects to the desired runner.
+    - Confirm that the **Read Data File** step is able to read the file stored on the server.
 
 <!-- FooterStart -->
 ---

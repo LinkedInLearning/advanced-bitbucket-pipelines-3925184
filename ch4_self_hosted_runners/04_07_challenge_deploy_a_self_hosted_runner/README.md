@@ -28,6 +28,8 @@ Complete the following steps to solve this challenge:
 
 1. Deploy a runner on the EC2 instance using the runner type that is most applicable to the needs of the DevOps team.
 
+    **NOTE: If you are following along with the course and have deployed the resources described in [04_05 Install Runners in a Workspace](../04_05_install_runners_in_a_workspace/), then you can skip this step.  Those runners can be reused for this challenge.**
+
     - What type of runner should you deploy; **Linux Shell** or **Linux Docker**?
     - Why is the runner you selected the right choice for your solution?
 
