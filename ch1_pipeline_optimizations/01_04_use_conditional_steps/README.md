@@ -57,6 +57,9 @@ Bitbucket allows us to use a `condition` directive to run portions of a pipeline
     └── database-schema.json
 ```
 
+TODO: Add steps to use the exercise files
+TODO: Add steps to run initial pipeline
+
 <!-- FooterStart -->
 ---
 [← 01_03 Configure resource allocation](../01_03_configure_resource_allocation/README.md) | [01_05 Cache Dependencies →](../01_05_cache_dependencies/README.md)
