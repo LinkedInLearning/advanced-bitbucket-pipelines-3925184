@@ -25,7 +25,7 @@ Review the current pipeline configuration and make changes to optimize the pipel
 
     ![Run initial pipeline, step 1](./images/SCR-20250103-trnw-run-initial-pipeline-1.png)
 
-    ![Run initial pipeline, step 1](./images/SCR-20250103-trwv-run-initial-pipeline-2.png)
+    ![Run initial pipeline, step 2](./images/SCR-20250103-trwv-run-initial-pipeline-2.png)
 
 1. Review the pipeline to get an idea of the pipeline performance before making any changes.
 1. Update the [pipeline configuration](./bitbucket-pipelines.yml) to meet the specifications provided by the Data Analysis team.
