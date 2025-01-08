@@ -10,9 +10,8 @@ Description: >
 
   The following outputs are created for your reference:
     1) Region where the stack is deployed.
-    2) Account ID where the stack is deployed.
-    3) URLs for the staging and production environments.
-    4) AccessKeyId and SecretAccessKey for the service account.
+    2) URLs for the staging and production environments.
+    3) AccessKeyId and SecretAccessKey for the service account.
 
   BE SURE TO PROTECT THE CREDENTIALS THAT ARE CREATED AND
   DELETE THIS STACK WHEN YOU ARE FINISHED WITH THE COURSE.
@@ -261,7 +260,7 @@ Outputs:
     Value:
       !GetAtt Keys.SecretAccessKey
 
-  AwsRegion:
-    Description: The AWS_REGION where the stack is deployed.
+  AwsDefaultRegion:
+    Description: The AWS_DEFAULT_REGION where the stack is deployed.
     Value:
       !Sub ${AWS::Region}
