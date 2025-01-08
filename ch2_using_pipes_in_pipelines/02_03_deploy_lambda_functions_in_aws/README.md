@@ -70,6 +70,8 @@ Having the following items in place before starting this lab will help you have 
 
     ![staging url](./images/10-staging-url.png)
 
+1. TODO: Add details for storing the values in Bitbucket as repository variables and deployment variables.
+
 [^1]: WARNING! The values for `AwsAccessKeyId` and `AwsSecretAccessKey` are sensitive.  Treat them as your would a username and password.  Do not store them in publicly available repositories, files, or documents.
 
 <!-- FooterStart -->

@@ -61,6 +61,10 @@ If you encounter any version discrepancies, please refer to the course’s Q&A s
 This course was created using the following software:
 
 - TODO: Add software versions at the completion of recording (also update the script!)
+- Node 23.5.0
+- NPM 10.9.2
+- Docker for macOS 27.4.0 build bde2b89
+-
 
 <!-- FooterStart -->
 ---
