@@ -70,7 +70,7 @@ test.bats
 
 ## Shenanigans
 
-### 03_03.1: The `setup()` Function is Treated Differently by Differnt Versions of `pytest`
+### 03_03.1: The `setup()` Function is Treated Differently by Different Versions of `pytest`
 
 - Older versions of `pytest` will call the `setup()` function before each test by default
 

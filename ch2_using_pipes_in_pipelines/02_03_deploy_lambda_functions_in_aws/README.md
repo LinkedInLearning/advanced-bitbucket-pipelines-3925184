@@ -60,7 +60,7 @@ Having the following items in place before starting this lab will help you have 
     - StagingFunctionName
     - StagingURL
 
-    > [!WARNING] The values for `AwsAccessKeyId` and `AwsSecretAccessKey` are sensitive.  Treat them as your would a username and password.  Do not store them in publicly available repositories, files, or documents.
+    > [!WARNING] The values for `AwsAccessKeyId` and `AwsSecretAccessKey` are sensitive.  Treat them as you would a username and password.  Do not store them in publicly available repositories, files, or documents.
 
     ![outputs](./images/08-outputs.png)
 
@@ -72,7 +72,7 @@ Having the following items in place before starting this lab will help you have 
 
 1. TODO: Add details for storing the values in Bitbucket as repository variables and deployment variables.
 
-[^1]: WARNING! The values for `AwsAccessKeyId` and `AwsSecretAccessKey` are sensitive.  Treat them as your would a username and password.  Do not store them in publicly available repositories, files, or documents.
+[^1]: WARNING! The values for `AwsAccessKeyId` and `AwsSecretAccessKey` are sensitive.  Treat them as you would a username and password.  Do not store them in publicly available repositories, files, or documents.
 
 <!-- FooterStart -->
 ---
