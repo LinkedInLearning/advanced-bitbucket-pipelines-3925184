@@ -79,6 +79,7 @@ Having the following items in place before starting this lab will help you have 
 
 1. After the creation is complete, select the **Outputs** tab to see the values for:
 
+    - **AwsRegion**: Make a note of this region for configuring a repository variable.
     - **TerminalURL**: Follow this URL to open a terminal on the server to install runners.
 
     ![Outputs TerminalURL](./images/08-outputs.png)

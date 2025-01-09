@@ -37,7 +37,7 @@ Complete the following steps to solve this challenge:
 
     1. A script that will read a Parameter Store location and then read a data file.
     1. A pipeline configuration that schedules a step to run on a self-hosted runner and then runs the script.
-    1. A repository variable that contains the region where the runner was deployed.
+    1. A repository variable named `AWS_REGION` that contains the region where the runner was deployed.
 
 1. Confirm that the runner you deployed and the repository configuration validate the proof of concept.
 

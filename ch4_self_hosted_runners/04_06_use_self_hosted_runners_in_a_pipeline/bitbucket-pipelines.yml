@@ -18,7 +18,6 @@ pipelines:
         runs-on:
           - self.hosted
           - linux.shell
-          - os.al2023
         script: *inspect-runner-environment
     - step:
         name: Use Linux Docker Runner
