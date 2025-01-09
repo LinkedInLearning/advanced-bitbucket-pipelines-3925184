@@ -25,16 +25,19 @@ Cheers!
 
 This repository has directories for each of the videos in the course.
 
+Download this repo as a zip file and reference the files on your local system.
 
-## Installing
+In most cases, you will be creating a new repo in Bitbucket and adding specific exercise files to that repo.
 
-1. To use these exercise files, you must have the following installed:
+## Software
 
-   - [list of requirements for course]
+To use these exercise files, you must have the following installed:
 
-2. Clone this repository into your local machine using the terminal (Mac), CMD (Windows), or a GUI tool like SourceTree.
-3. [Course-specific instructions]
-
+   - [Git](https://git-scm.com/)
+   - [Node.js](https://nodejs.org/)
+   - [npm](https://www.npmjs.com/)
+   - [Docker](https://www.docker.com/)
+   - [Python](https://www.python.org/)
 
 [0]: # (Replace these placeholder URLs with actual course URLs)
 
