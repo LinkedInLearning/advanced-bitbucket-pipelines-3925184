@@ -32,7 +32,7 @@ Browse to [aws.amazon.com/free](https:.//aws.amazon.com/free) and follow the ste
 
 ## Exercise Files
 
-**Exercise files** are also available for your reference.  A link to the files is on the homepage of the course.
+Exercise files are available for your use and reference.  A link to the files is on the homepage of the course.
 
 The files contain:
 

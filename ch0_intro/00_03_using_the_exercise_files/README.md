@@ -6,7 +6,7 @@ Use these files to follow along with demonstrations and as a starting point for 
 
 The exercise files are located in the following GitHub repository:
 
-- [Advanced Bitbucket Pipelines: Automating Deployments & Managing Third Party Integrations](https://github.com/LinkedInLearning/advanced-bitbucket-pipelines-automating-deployments-and-managing-third-party-integrations-3925184.git)
+- [Advanced Bitbucket Pipelines: Automating Deployments & Managing Third Party Integrations](https://github.com/LinkedInLearning/advanced-bitbucket-pipelines-3925184.git)
 
 ## Downloading the Exercise Files
 
