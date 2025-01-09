@@ -60,11 +60,22 @@ If you encounter any version discrepancies, please refer to the course’s Q&A s
 
 This course was created using the following software:
 
-- TODO: Add software versions at the completion of recording (also update the script!)
+- Git version 2.40.1
 - Node 23.5.0
 - NPM 10.9.2
-- Docker for macOS 27.4.0 build bde2b89
--
+- Yeoman 5.1.0
+- generator-bitbucket-pipe 10.9.2
+- Docker
+  - Docker for macOS 27.4.0, build bde2b89
+  - Docker for Linux 25.0.5, build 5dc9bcc
+- OpenJDK Runtime Environment Corretto-23.0.1.8.1 (build 23.0.1+8-FR)
+- Amazon Linux al2023-ami-kernel-6.1-x86_64
+- AWS Lambda Runtime for Python 3.10
+- Bitbucket Pipes
+  - atlassian/aws-lambda-deploy:1.12.0
+  - atlassian/bitbucket-iac-scan:0.5.2
+  - atlassian/bitbucket-build-statistics:1.5.3
+  - atlassian/bitbucket-upload-file:0.7.4
 
 <!-- FooterStart -->
 ---

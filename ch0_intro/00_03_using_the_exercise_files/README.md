@@ -21,7 +21,7 @@ The best way to use the exercise files is to download the repo as a zip file and
 
 1. The exercise files are organized in directories by chapter and video.
 1. Locate the chapter and video that correspond to the course content.
-1. Use the files as needed, uploading them to a Bitbucket, applying them in the AWS web interface, or modifying them in your local editor.
+1. Use the files as needed by adding them to a Bitbucket repo, applying them in the AWS web interface, or modifying them in your local editor.
 
 <!-- FooterStart -->
 ---
