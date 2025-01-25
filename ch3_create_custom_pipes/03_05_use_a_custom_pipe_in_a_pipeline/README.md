@@ -4,7 +4,7 @@ TODO: Add some steps here
 
 ## Shenanigans
 
-### 03_05.1: The Log Output for the Custom Pipe may be Truncated.
+### 03_05.1: The Log Output for the Custom Pipe may be truncated
 
 When the custom pipeline developed in the previous lesson is run, the output from the log is cut off.
 

@@ -1,6 +1,7 @@
 # 02_04 Use a pipe to deploy code to AWS Lambda
 
 TODO: Add steps to configure the repo (deployment variables, repo variables)
+TODO: Add details for storing the values in Bitbucket as repository variables and deployment variables.
 TODO: Add steps to use the pipeline configuration
 
 <!-- FooterStart -->
