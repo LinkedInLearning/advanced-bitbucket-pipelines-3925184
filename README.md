@@ -2,6 +2,13 @@
 
 This is the repository for the LinkedIn Learning course `Advanced Bitbucket Pipelines: Automating Deployments & Managing Third Party Integrations`. The full course is available from [LinkedIn Learning][lil-course-url].
 
+![lil-thumbnail-url]
+
+## Course Description
+
+<p>In this course, software engineer Michael Jenkins guides you through how to use advanced Bitbucket topics for your software projects. Gain a solid understanding of developing optimal Bitbucket Pipelines to automate deployments. Dive into integrating Bitbucket Pipelines with third party services within your environment.</p><p>
+Check out this course to find out how you can solve complex CI/CD challenges using Bitbucket Pipelines to reduce build times, leverage the power of pipeline components, and deploy self-hosted runners for more control of your build environments.</p>
+
 _See the readme file in the main branch for updated instructions and information._
 
 ## Message from the instructor
@@ -39,10 +46,18 @@ To use these exercise files, you must have the following installed:
    - [Docker](https://www.docker.com/)
    - [Python](https://www.python.org/)
 
+## Instructor
+
+Michael Jenkins
+
+Senior Systems Engineer            
+
+Check out my other courses on [LinkedIn Learning](https://www.linkedin.com/learning/instructors/michael-jenkins?u=104).
+
 [0]: # (Replace these placeholder URLs with actual course URLs)
 
-[lil-course-url]: https://www.linkedin.com/learning/
-[lil-thumbnail-url]: http://
+[lil-course-url]: https://www.linkedin.com/learning/advanced-bitbucket-pipelines-automating-deployments-and-managing-third-party-integrations
+[lil-thumbnail-url]: https://media.licdn.com/dms/image/v2/D4E0DAQEtb5QOp2cq9w/learning-public-crop_675_1200/B4EZT7Ov5NGYAY-/0/1739381735658?e=2147483647&v=beta&t=k03SgGqwASFU3H6ljtjnue6-e7ogrCnApwhMcDZMvz8
 
 <!-- FooterStart -->
 ---
