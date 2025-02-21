@@ -5,7 +5,93 @@ Licensed under the LinkedIn Learning Exercise File License (the "License").
 See LICENSE in the project root for license information.
 
 ATTRIBUTIONS:
-[PLEASE PROVIDE ATTRIBUTIONS OR DELETE THIS AND THE ABOVE LINE “ATTRIBUTIONS”]
+
+--------------------
+**pg**
+https://github.com/ged/ruby-pg
+License: BSD-2-Clause
+https://opensource.org/licenses/BSD-2-Clause
+--------------------
+**minitest**
+https://github.com/seattlerb/minitest
+License: MIT
+https://opensource.org/licenses/MIT
+--------------------
+**psycopg2**
+https://github.com/psycopg/psycopg2
+License: LGPL-3.0
+https://opensource.org/licenses/LGPL-3.0
+--------------------
+**black**
+https://github.com/psf/black
+License: MIT
+https://opensource.org/licenses/MIT
+--------------------
+**flake8**
+https://github.com/PyCQA/flake8
+License: MIT
+https://opensource.org/licenses/MIT
+--------------------
+**pytest**
+https://github.com/pytest-dev/pytest
+License: MIT
+https://opensource.org/licenses/MIT
+--------------------
+**numpy**
+https://github.com/numpy/numpy
+License: BSD-3-Clause
+https://opensource.org/licenses/BSD-3-Clause
+--------------------
+**pandas**
+https://github.com/pandas-dev/pandas
+License: BSD-3-Clause
+https://opensource.org/licenses/BSD-3-Clause
+--------------------
+**tensorflow**
+https://github.com/tensorflow/tensorflow
+License: Apache 2.0
+https://www.apache.org/licenses/LICENSE-2.0
+--------------------
+**scikit-learn**
+https://github.com/scikit-learn/scikit-learn
+License: BSD-3-Clause
+https://opensource.org/licenses/BSD-3-Clause
+--------------------
+**pylint**
+https://github.com/PyCQA/pylint
+License: GPL-2.0
+https://opensource.org/licenses/GPL-2.0
+--------------------
+**awscli**
+https://github.com/aws/aws-cli
+License: Apache 2.0
+https://www.apache.org/licenses/LICENSE-2.0
+--------------------
+**bitbucket-pipes-toolkit**
+https://bitbucket.org/atlassian/bitbucket-pipes-toolkit
+License: Apache 2.0
+https://www.apache.org/licenses/LICENSE-2.0
+--------------------
+**boto3**
+https://github.com/boto/boto3
+License: Apache 2.0
+https://www.apache.org/licenses/LICENSE-2.0
+--------------------
+**setuptools**
+https://github.com/pypa/setuptools
+License: MIT
+https://opensource.org/licenses/MIT
+--------------------
+**psutil**
+https://github.com/giampaolo/psutil
+License: BSD-3-Clause
+https://opensource.org/licenses/BSD-3-Clause
+--------------------
+**py-cpuinfo**
+https://github.com/workhorsy/py-cpuinfo
+License: MIT
+https://opensource.org/licenses/MIT
+--------------------
 
 Please note, this project may automatically load third party code from external 
 repositories (for example, NPM modules, Composer packages, or other dependencies). 
