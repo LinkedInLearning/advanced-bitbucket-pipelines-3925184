@@ -21,20 +21,6 @@ Cheers!
 
 - [Michael J.](https://www.linkedin.com/in/michaelpjenkins/)
 
-## Instructions
-
-This repository has directories for each of the videos in the course.
-
-
-## Installing
-
-1. To use these exercise files, you must have the following installed:
-
-   - [list of requirements for course]
-
-2. Clone this repository into your local machine using the terminal (Mac), CMD (Windows), or a GUI tool like SourceTree.
-3. [Course-specific instructions]
-
 
 [0]: # (Replace these placeholder URLs with actual course URLs)
 
