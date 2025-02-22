@@ -49,7 +49,7 @@ Having the following items in place before starting this lab will help you have 
 
     Using your system's file finder, browse to the location where the CloudFormation template is located.
 
-    Select the file [AWS-Lambda-CloudFormation.yml](./AWS-Runner-CloudFormation.yml).
+    Select the file [AWS-EC2-Runner-CloudFormation.yml](./AWS-EC2-Runner-CloudFormation.yml).
 
     Select **Next**.
 
