@@ -1,6 +1,26 @@
 # 03_05 Use a custom pipe in a pipeline
 
-TODO: Add some steps here
+If you followed along with the previous lessons to:
+
+- create a custom pipe
+- and push the pipe to a container registry
+
+Create a Bitbucket Pipelines configuration that uses the pipe.
+
+Your configuration should be similar to the following:
+
+```yaml
+image: atlassian/default-image:4
+
+pipelines:
+  default:
+    - step:
+        name: Test Custom Pipe
+        script:
+          - pipe: YOUR_USER_NAME_HERE/YOUR_PIPE_NAME_HERE:PIPE.VERSION.HERE
+            variables:
+              NAME: "$BITBUCKET_REPO_OWNER" # Or any other variables that your pipe needs
+```
 
 ## Shenanigans
 

@@ -57,8 +57,17 @@ Bitbucket allows us to use a `condition` directive to run portions of a pipeline
     └── database-schema.json
 ```
 
-TODO: Add steps to use the exercise files
-TODO: Add steps to run initial pipeline
+## Using the Exercise Files
+
+1. Create a new repo and add the exercise files
+1. Adding the files may not trigger the pipeline right away.  Go to the **Pipelines** menu and select **Run initial pipeline**.
+1. The initial pipeline does not include conditional steps.
+1. Replace the initial pipeline with the contents of `bitbucket-pipelines-no-conditional-steps.yml`.
+1. Observe the pipeline activity after committing the new pipeline configuration.
+1. Make a change to a file in either `python-backend` or `ruby-backend`, such as adding a comment.
+1. Observe the pipeline activity after committing the updated file.
+1. Make a change to `database-schema.json` in the `shared` directory.
+1. Observe the pipeline activity after committing the updated file.
 
 <!-- FooterStart -->
 ---

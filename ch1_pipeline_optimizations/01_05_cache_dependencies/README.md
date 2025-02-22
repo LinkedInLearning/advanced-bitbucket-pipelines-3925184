@@ -61,8 +61,13 @@ Then use the cache by name in a `step`:
 - [Caches - Step Options](https://support.atlassian.com/bitbucket-cloud/docs/step-options/#Caches)
 - [Caches - Documentation](https://support.atlassian.com/bitbucket-cloud/docs/cache-dependencies/)
 
-TODO: Add steps to use the exercise files
-TODO: Add steps to run initial pipeline
+## Using the Exercise Files
+
+1. The lesson reuses the repo and exercise files from [01_04 Use Conditional Steps](../01_04_use_conditional_steps/README.md).
+1. Replace the contents of the pipeline configuration with the contents of the `bitbucket-pipelines.yaml` from this lesson.
+1. Observe the pipeline activity after committing the new pipeline configuration.
+1. Make a change to a file in `ruby-backend`, such as adding a comment.
+1. Observe the pipeline activity after committing the updated file.
 
 <!-- FooterStart -->
 ---

@@ -1,5 +1,9 @@
 # 01_03 Configure resource allocation
 
+## Reference
+
+[Size](https://support.atlassian.com/bitbucket-cloud/docs/global-options/#Size)
+
 We can use the `size` option to allocate additional CPU, memory, and storage for an entire pipeline, or for a specific step.
 
 ## Pipeline Resource Allocation
@@ -40,8 +44,11 @@ The `size` option can be set to one of the following values:
 > Increasing size uses additional build minutes.
 > 2x, 4x, and 8x will use the same multiplier on build minutes per minute of execution
 
-TODO: Add steps to use the exercise files
-TODO: Add steps to run initial pipeline
+## Using the Exercise Files
+
+1. Create a new repo and add the exercise files
+1. Adding the files may not trigger the pipeline right away.  Go to the **Pipelines** menu and select **Run initial pipeline**.
+1. Compare the runtimes of the steps that use different size runners.
 
 <!-- FooterStart -->
 ---

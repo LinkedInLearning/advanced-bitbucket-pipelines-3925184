@@ -2,7 +2,7 @@
 
 Start by enabling Pipelines in the repository settings.
 
-Then get set up Docker Hub.
+Then get set up in Docker Hub.
 
 ## Setting Up an Image Repository on Docker Hub
 
