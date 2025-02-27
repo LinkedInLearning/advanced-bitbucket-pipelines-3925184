@@ -22,7 +22,7 @@ def load_dataset(file_path):
     print("Creating or loading dataset...")
 
     # FIXME: Add code to download the dataset from Amazing Mobile App HQ
-    # If not data is in place, generate a random dataset
+    # If no data is in place, generate a random dataset
     if not os.path.exists(file_path):
         os.makedirs(os.path.dirname(file_path), exist_ok=True)
 
